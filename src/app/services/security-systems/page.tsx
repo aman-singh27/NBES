@@ -40,8 +40,7 @@ export default function SecuritySystemsPage() {
               <SectionLabel>Security Systems</SectionLabel>
               <h1 className="mt-4 font-display text-display-lg font-extrabold uppercase text-white">
                 Industrial CCTV, Access Control
-                <br />
-                & Fire Alarm India
+                <br />& Fire Alarm India
               </h1>
               <p className="mt-5 max-w-[640px] font-body text-[17px] font-light leading-[1.75] text-white/70">
                 We design and install security systems that support factory,

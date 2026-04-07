@@ -7,8 +7,7 @@ import SectionLabel from "@/components/SectionLabel";
 import { FAQSchema, ServiceSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title:
-    "IS 3043 Earthing Solutions - Chemical & Conventional Earthing India",
+  title: "IS 3043 Earthing Solutions - Chemical & Conventional Earthing India",
   description:
     "NBES provides IS 3043-compliant chemical earthing, conventional plate/pipe earthing, and lightning protection for industrial plants, data centers, and telecom towers across India. Full soil testing and documentation.",
   alternates: {
@@ -23,7 +22,8 @@ const earthingFaqs = [
       "IS 3043 is the Indian Standard that defines safe earthing system design, installation, and testing practices for electrical protection and fault current dissipation.",
   },
   {
-    question: "What is the difference between chemical and conventional earthing?",
+    question:
+      "What is the difference between chemical and conventional earthing?",
     answer:
       "Chemical earthing uses conductive compounds to stabilise soil resistance, while conventional earthing uses plate or pipe electrodes. The right choice depends on soil conditions and the facility load.",
   },
@@ -125,7 +125,10 @@ export default function EarthingSolutionsPage() {
             </div>
             <div className="space-y-4">
               {earthingFaqs.map((faq) => (
-                <article key={faq.question} className="rounded-[6px] border border-white/10 bg-white/5 p-5">
+                <article
+                  key={faq.question}
+                  className="rounded-[6px] border border-white/10 bg-white/5 p-5"
+                >
                   <h3 className="font-display text-[17px] font-bold uppercase text-white">
                     {faq.question}
                   </h3>

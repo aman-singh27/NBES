@@ -62,7 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "New Bharat Engineer Services | Electrical & Earthing Solutions India",
+    title:
+      "New Bharat Engineer Services | Electrical & Earthing Solutions India",
     description:
       "Industrial electrical works, IS 3043 earthing, CCTV security, and certified manpower across India.",
     images: ["/og-image.jpg"],
@@ -89,7 +90,11 @@ export default function RootLayout({
     <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
       </head>
       <body className="m-0 bg-white font-body text-black antialiased">
         <a

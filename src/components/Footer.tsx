@@ -123,7 +123,10 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-white/8 pt-5 font-body text-[12px] text-white/45 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} NBES. All rights reserved.</p>
           <div className="flex gap-5">
-            <Link href="/privacy" className="transition-colors hover:text-white">
+            <Link
+              href="/privacy"
+              className="transition-colors hover:text-white"
+            >
               Privacy
             </Link>
             <Link href="/terms" className="transition-colors hover:text-white">

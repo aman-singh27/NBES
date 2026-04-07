@@ -7,7 +7,8 @@ import SectionLabel from "@/components/SectionLabel";
 import { ServiceSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Certified Electrical Manpower Supply - ITI Electricians & Supervisors India",
+  title:
+    "Certified Electrical Manpower Supply - ITI Electricians & Supervisors India",
   description:
     "NBES supplies ITI and diploma-certified electricians, site supervisors, and engineers for short and long-term contracts. Insured workforce, Contract Labour Act compliant, rapid mobilization in 5-7 days.",
   alternates: {

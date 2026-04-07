@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-24 md:py-18 sm:py-14;
+  }
+
+  .container-width {
+    @apply mx-auto max-w-[1240px] px-10 md:px-6 sm:px-5;
+  }
+
+  .heading-uppercase {
+    @apply font-display uppercase tracking-[-0.01em];
+  }
+
+  .body-light {
+    @apply font-body font-light leading-[1.75] text-mid-grey;
+  }
+
+  .eyebrow-label {
+    @apply flex items-center gap-3 font-body text-[12px] font-medium uppercase tracking-[0.14em] text-accent;
+  }
+
+  .eyebrow-label::before {
+    content: "";
+    @apply block h-[2px] w-6 flex-shrink-0 bg-accent;
+  }
+}

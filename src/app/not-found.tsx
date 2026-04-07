@@ -6,7 +6,9 @@ export default function NotFound() {
     <section className="flex min-h-[calc(100vh-72px)] items-center justify-center bg-black px-5 text-center">
       <div>
         <SectionLabel centered>404 - Not Found</SectionLabel>
-        <h1 className="mt-4 font-display text-display-xl text-white">PAGE NOT FOUND</h1>
+        <h1 className="mt-4 font-display text-display-xl text-white">
+          PAGE NOT FOUND
+        </h1>
         <p className="body-light mx-auto mt-4 max-w-sm text-white/65">
           The page you&apos;re looking for doesn&apos;t exist.
         </p>

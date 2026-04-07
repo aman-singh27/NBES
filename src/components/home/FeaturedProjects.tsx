@@ -51,9 +51,15 @@ export default function FeaturedProjects() {
               </h2>
             </div>
 
-            <Link href="/projects" className="group inline-flex items-center gap-2 font-display text-[13px] font-bold uppercase text-accent">
+            <Link
+              href="/projects"
+              className="group inline-flex items-center gap-2 font-display text-[13px] font-bold uppercase text-accent"
+            >
               View All Projects
-              <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              <ArrowRight
+                size={14}
+                className="transition-transform group-hover:translate-x-1"
+              />
             </Link>
           </div>
         </ScrollRevealBlock>
@@ -63,7 +69,9 @@ export default function FeaturedProjects() {
             <article
               key={project.title}
               className={`group relative overflow-hidden ${
-                index === 0 ? "aspect-[4/3] lg:row-span-2 lg:h-full" : "aspect-[4/3]"
+                index === 0
+                  ? "aspect-[4/3] lg:row-span-2 lg:h-full"
+                  : "aspect-[4/3]"
               }`}
             >
               <ImagePlaceholder
@@ -78,10 +86,14 @@ export default function FeaturedProjects() {
                 <span className="mb-2 inline-block rounded-[2px] bg-accent px-[10px] py-[3px] font-display text-[10px] font-bold uppercase tracking-[0.1em] text-white">
                   {project.category}
                 </span>
-                <h3 className={`font-display font-bold uppercase text-white ${index === 0 ? "text-[28px]" : "text-[20px]"}`}>
+                <h3
+                  className={`font-display font-bold uppercase text-white ${index === 0 ? "text-[28px]" : "text-[20px]"}`}
+                >
                   {project.title}
                 </h3>
-                <p className="mt-1 font-body text-[13px] text-white/60">{project.location}</p>
+                <p className="mt-1 font-body text-[13px] text-white/60">
+                  {project.location}
+                </p>
               </div>
 
               <div className="absolute bottom-5 right-5 flex items-center gap-1 font-display text-[12px] font-bold uppercase text-white/0 transition-all duration-300 group-hover:text-white/80">

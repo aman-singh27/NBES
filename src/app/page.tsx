@@ -9,22 +9,32 @@ import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 import StatsCounter from "@/components/StatsCounter";
 
-const logos = ["Client Co.", "Group XYZ", "Industrial Ltd", "Infra Corp", "Gov Agency", "Builder Co."];
+const logos = [
+  "Client Co.",
+  "Group XYZ",
+  "Industrial Ltd",
+  "Infra Corp",
+  "Gov Agency",
+  "Builder Co.",
+];
 
 const whyItems = [
   {
     title: "IS & IEC Certified Standards",
-    description: "Every execution follows documented standards for safety, quality, and compliance readiness.",
+    description:
+      "Every execution follows documented standards for safety, quality, and compliance readiness.",
     icon: BadgeCheck,
   },
   {
     title: "End-to-End Delivery",
-    description: "From assessment to commissioning, one accountable team manages your complete scope.",
+    description:
+      "From assessment to commissioning, one accountable team manages your complete scope.",
     icon: GitMerge,
   },
   {
     title: "Zero-Incident Safety Culture",
-    description: "Disciplined site protocols and supervised teams keep project environments safe and controlled.",
+    description:
+      "Disciplined site protocols and supervised teams keep project environments safe and controlled.",
     icon: ShieldCheck,
   },
 ] as const;
@@ -71,8 +81,9 @@ export default function Home() {
               EXPERIENCE
             </h2>
             <p className="body-light max-w-[560px]">
-              NBES combines technical depth, certified field teams, and disciplined project controls to deliver
-              dependable outcomes for industrial, commercial, and government clients across India.
+              NBES combines technical depth, certified field teams, and
+              disciplined project controls to deliver dependable outcomes for
+              industrial, commercial, and government clients across India.
             </p>
             <Link
               href="/contact"
@@ -93,8 +104,12 @@ export default function Home() {
                       <Icon size={20} className="text-accent" />
                     </div>
                     <div>
-                      <h3 className="mb-1 font-display text-[17px] font-bold uppercase text-black">{item.title}</h3>
-                      <p className="font-body text-sm leading-[1.6] text-mid-grey">{item.description}</p>
+                      <h3 className="mb-1 font-display text-[17px] font-bold uppercase text-black">
+                        {item.title}
+                      </h3>
+                      <p className="font-body text-sm leading-[1.6] text-mid-grey">
+                        {item.description}
+                      </p>
                     </div>
                   </article>
                 );

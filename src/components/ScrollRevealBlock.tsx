@@ -8,7 +8,10 @@ type ScrollRevealBlockProps = {
   className?: string;
 };
 
-export default function ScrollRevealBlock({ children, className = "" }: ScrollRevealBlockProps) {
+export default function ScrollRevealBlock({
+  children,
+  className = "",
+}: ScrollRevealBlockProps) {
   const { ref, inView } = useScrollReveal<HTMLDivElement>();
 
   return (

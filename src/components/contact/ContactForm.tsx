@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { AlertCircle, ArrowRight, CheckCircle2, ChevronDown, Loader2, Lock } from "lucide-react";
+import {
+  AlertCircle,
+  ArrowRight,
+  CheckCircle2,
+  ChevronDown,
+  Loader2,
+  Lock,
+} from "lucide-react";
 import { FormEvent, useState } from "react";
 
 type ContactFormData = {
@@ -40,7 +47,10 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const fieldClassName =
   "w-full h-[52px] rounded-[3px] border border-border px-4 font-body text-[15px] text-charcoal placeholder:font-light placeholder:text-mid-grey transition-colors duration-200 focus:border-accent focus:outline-none";
 
-function getFieldError(field: keyof ContactFormData, value: string): string | undefined {
+function getFieldError(
+  field: keyof ContactFormData,
+  value: string,
+): string | undefined {
   const trimmedValue = value.trim();
 
   if (field === "message") {
@@ -132,10 +142,16 @@ export default function ContactForm() {
   if (isSuccess) {
     return (
       <div className="py-16 text-center">
-        <CheckCircle2 className="mx-auto mb-6 h-16 w-16 text-accent" aria-hidden="true" />
-        <h3 className="font-display text-[28px] font-bold uppercase text-black">Message Sent!</h3>
+        <CheckCircle2
+          className="mx-auto mb-6 h-16 w-16 text-accent"
+          aria-hidden="true"
+        />
+        <h3 className="font-display text-[28px] font-bold uppercase text-black">
+          Message Sent!
+        </h3>
         <p className="body-light mt-3">
-          Thanks! We&apos;ll review your project details and be in touch within 24 hours.
+          Thanks! We&apos;ll review your project details and be in touch within
+          24 hours.
         </p>
         <Link
           href="/"
@@ -150,7 +166,10 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} noValidate>
       <div className="mb-5 flex flex-col">
-        <label htmlFor="name" className="mb-[6px] block font-body text-[13px] font-medium text-charcoal">
+        <label
+          htmlFor="name"
+          className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
+        >
           Full Name
         </label>
         <input
@@ -175,7 +194,10 @@ export default function ContactForm() {
       </div>
 
       <div className="mb-5 flex flex-col">
-        <label htmlFor="company" className="mb-[6px] block font-body text-[13px] font-medium text-charcoal">
+        <label
+          htmlFor="company"
+          className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
+        >
           Company Name
         </label>
         <input
@@ -200,7 +222,10 @@ export default function ContactForm() {
 
       <div className="mb-5 grid grid-cols-2 gap-4 sm:grid-cols-1">
         <div className="flex flex-col">
-          <label htmlFor="phone" className="mb-[6px] block font-body text-[13px] font-medium text-charcoal">
+          <label
+            htmlFor="phone"
+            className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
+          >
             Phone Number
           </label>
           <input
@@ -225,7 +250,10 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col">
-          <label htmlFor="email" className="mb-[6px] block font-body text-[13px] font-medium text-charcoal">
+          <label
+            htmlFor="email"
+            className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
+          >
             Email Address
           </label>
           <input
@@ -251,7 +279,10 @@ export default function ContactForm() {
       </div>
 
       <div className="mb-5 flex flex-col">
-        <label htmlFor="service" className="mb-[6px] block font-body text-[13px] font-medium text-charcoal">
+        <label
+          htmlFor="service"
+          className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
+        >
           Service Needed
         </label>
         <div className="relative">
@@ -272,7 +303,10 @@ export default function ContactForm() {
               </option>
             ))}
           </select>
-          <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mid-grey" aria-hidden="true" />
+          <ChevronDown
+            className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mid-grey"
+            aria-hidden="true"
+          />
         </div>
         {errors.service ? (
           <p className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]">
@@ -283,7 +317,10 @@ export default function ContactForm() {
       </div>
 
       <div className="mb-5 flex flex-col">
-        <label htmlFor="state" className="mb-[6px] block font-body text-[13px] font-medium text-charcoal">
+        <label
+          htmlFor="state"
+          className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
+        >
           State / Location
         </label>
         <input
@@ -307,7 +344,10 @@ export default function ContactForm() {
       </div>
 
       <div className="mb-5 flex flex-col">
-        <label htmlFor="message" className="mb-[6px] block font-body text-[13px] font-medium text-charcoal">
+        <label
+          htmlFor="message"
+          className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
+        >
           Project Description
         </label>
         <textarea

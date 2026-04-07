@@ -62,7 +62,10 @@ export default function Hero() {
           animate={inView ? "show" : "hidden"}
           className="container-width py-24 lg:py-28"
         >
-          <motion.div variants={itemVariants} transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}>
+          <motion.div
+            variants={itemVariants}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          >
             <SectionLabel>Electrical & Technical Solutions</SectionLabel>
           </motion.div>
 
@@ -83,8 +86,9 @@ export default function Hero() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 max-w-[460px] font-body text-[17px] font-light leading-[1.75] text-white/65"
           >
-            NBES delivers certified electrical works, precision earthing, integrated security, and skilled
-            technical manpower - for industrial, commercial, and government projects across India.
+            NBES delivers certified electrical works, precision earthing,
+            integrated security, and skilled technical manpower - for
+            industrial, commercial, and government projects across India.
           </motion.p>
 
           <motion.div
@@ -97,7 +101,10 @@ export default function Hero() {
               className="group inline-flex items-center gap-2 rounded-btn bg-accent px-7 py-[14px] font-display text-sm font-bold uppercase tracking-[0.06em] text-white transition-all hover:-translate-y-px hover:bg-accent-dark hover:shadow-[0_8px_20px_rgba(0,71,204,0.25)]"
             >
               Get a Quote
-              <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              <ArrowRight
+                size={14}
+                className="transition-transform group-hover:translate-x-1"
+              />
             </Link>
 
             <Link

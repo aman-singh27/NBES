@@ -42,7 +42,9 @@ function StatCell({ stat, index }: StatCellProps) {
         {count}
         <span className="text-accent">{stat.suffix}</span>
       </p>
-      <p className="mt-2 font-body text-sm uppercase tracking-[0.06em] text-white/45">{stat.label}</p>
+      <p className="mt-2 font-body text-sm uppercase tracking-[0.06em] text-white/45">
+        {stat.label}
+      </p>
     </div>
   );
 }
@@ -54,7 +56,15 @@ export default function StatsCounter() {
     <section ref={ref} className="bg-black py-16">
       <div className="container-width grid grid-cols-2 md:grid-cols-4">
         {stats.map((stat, index) =>
-          inView ? <StatCell key={stat.label} stat={stat} index={index} /> : <StatCell key={stat.label} stat={{ ...stat, value: 0 }} index={index} />,
+          inView ? (
+            <StatCell key={stat.label} stat={stat} index={index} />
+          ) : (
+            <StatCell
+              key={stat.label}
+              stat={{ ...stat, value: 0 }}
+              index={index}
+            />
+          ),
         )}
       </div>
     </section>

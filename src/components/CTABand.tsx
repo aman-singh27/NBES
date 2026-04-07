@@ -17,7 +17,9 @@ export default function CTABand({
 
       <div className="container-width relative z-10 flex flex-col items-center justify-between gap-10 text-center md:flex-row md:text-left">
         <div>
-          <h2 className="font-display text-display-lg font-extrabold uppercase text-white">{title}</h2>
+          <h2 className="font-display text-display-lg font-extrabold uppercase text-white">
+            {title}
+          </h2>
           <p className="mt-3 max-w-[560px] font-body text-[17px] font-light leading-[1.75] text-white/70">
             {subtitle}
           </p>

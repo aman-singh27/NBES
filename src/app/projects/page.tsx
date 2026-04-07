@@ -5,7 +5,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
-import ProjectGrid, { type ProjectItem } from "@/components/projects/ProjectGrid";
+import ProjectGrid, {
+  type ProjectItem,
+} from "@/components/projects/ProjectGrid";
 
 export const metadata: Metadata = {
   title: "Completed Projects | Electrical, Earthing & Security Portfolio",
@@ -72,8 +74,9 @@ export default function ProjectsPage() {
                 PROJECTS
               </h1>
               <p className="body-light mt-5 max-w-[440px] text-white/65">
-                Every project reflects our commitment to safety, precision, and standards compliance - from
-                industrial earthing to integrated security.
+                Every project reflects our commitment to safety, precision, and
+                standards compliance - from industrial earthing to integrated
+                security.
               </p>
               <Link
                 href="/contact"
@@ -100,7 +103,9 @@ export default function ProjectsPage() {
           <div className="container-width">
             <div className="mb-12 text-center">
               <SectionLabel centered>Recent Works</SectionLabel>
-              <h2 className="mt-4 font-display text-display-lg font-extrabold uppercase text-black">RECENT WORKS</h2>
+              <h2 className="mt-4 font-display text-display-lg font-extrabold uppercase text-black">
+                RECENT WORKS
+              </h2>
             </div>
 
             <ProjectGrid projects={projects} />

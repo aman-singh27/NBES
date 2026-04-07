@@ -47,7 +47,9 @@ type FAQAccordionProps = {
   sectionClassName?: string;
 };
 
-export default function FAQAccordion({ sectionClassName = "bg-white section-padding" }: FAQAccordionProps) {
+export default function FAQAccordion({
+  sectionClassName = "bg-white section-padding",
+}: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleItem = (index: number) => {

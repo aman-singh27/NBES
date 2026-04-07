@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
-import FilterBar, { type FilterCategory } from "@/components/projects/FilterBar";
+import FilterBar, {
+  type FilterCategory,
+} from "@/components/projects/FilterBar";
 
 export type ProjectCategory = Exclude<FilterCategory, "All">;
 
@@ -29,7 +31,11 @@ function chunkProjects(items: ProjectItem[]): ProjectItem[][] {
   return rows;
 }
 
-function isWideCard(pattern: (typeof rowPatterns)[number], cardIndex: number, rowLength: number): boolean {
+function isWideCard(
+  pattern: (typeof rowPatterns)[number],
+  cardIndex: number,
+  rowLength: number,
+): boolean {
   if (rowLength < 2) {
     return false;
   }
@@ -50,11 +56,16 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
 
   const filteredProjects = useMemo(
     () =>
-      activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory),
+      activeCategory === "All"
+        ? projects
+        : projects.filter((project) => project.category === activeCategory),
     [activeCategory, projects],
   );
 
-  const rows = useMemo(() => chunkProjects(filteredProjects), [filteredProjects]);
+  const rows = useMemo(
+    () => chunkProjects(filteredProjects),
+    [filteredProjects],
+  );
 
   return (
     <div>
@@ -108,12 +119,16 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                         </span>
                         <h3
                           className={`mt-3 font-display font-bold uppercase text-white ${
-                            isWide ? "text-[28px] leading-[0.95]" : "text-[22px] leading-[1.05]"
+                            isWide
+                              ? "text-[28px] leading-[0.95]"
+                              : "text-[22px] leading-[1.05]"
                           }`}
                         >
                           {project.title}
                         </h3>
-                        <p className="mt-1 font-body text-[13px] text-white/60">{project.location}</p>
+                        <p className="mt-1 font-body text-[13px] text-white/60">
+                          {project.location}
+                        </p>
                       </div>
 
                       <div className="absolute bottom-5 right-5 z-10 flex items-center gap-1 font-display text-[12px] uppercase text-white opacity-0 transition-opacity group-hover:opacity-80">

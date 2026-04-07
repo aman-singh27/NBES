@@ -7,7 +7,9 @@ type UseScrollRevealResult<T extends HTMLElement> = {
   inView: boolean;
 };
 
-export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(): UseScrollRevealResult<T> {
+export function useScrollReveal<
+  T extends HTMLElement = HTMLDivElement,
+>(): UseScrollRevealResult<T> {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
 

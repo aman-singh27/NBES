@@ -49,7 +49,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
       <body className="m-0 bg-white font-body text-black antialiased">
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-[100] focus:rounded-[3px] focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:text-black">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-[100] focus:rounded-[3px] focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:text-black"
+        >
           Skip to content
         </a>
         <Navbar />

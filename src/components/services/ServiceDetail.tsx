@@ -33,7 +33,13 @@ export default function ServiceDetail({
   const isImageLeft = layout === "image-left";
 
   return (
-    <section className={background === "off-white" ? "bg-off-white section-padding" : "bg-white section-padding"}>
+    <section
+      className={
+        background === "off-white"
+          ? "bg-off-white section-padding"
+          : "bg-white section-padding"
+      }
+    >
       <div
         className={
           isImageLeft
@@ -52,7 +58,9 @@ export default function ServiceDetail({
             </div>
 
             <div>
-              <p className="font-display text-[11px] tracking-[0.14em] text-accent mb-3">{num}</p>
+              <p className="font-display text-[11px] tracking-[0.14em] text-accent mb-3">
+                {num}
+              </p>
               <SectionLabel>{subtitle}</SectionLabel>
               <h2
                 id={id}
@@ -68,8 +76,14 @@ export default function ServiceDetail({
                 </h3>
                 <ul className="flex flex-col gap-3">
                   {included.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-sm text-charcoal">
-                      <CheckCircle2 size={16} className="text-accent flex-shrink-0" />
+                    <li
+                      key={item}
+                      className="flex items-center gap-3 text-sm text-charcoal"
+                    >
+                      <CheckCircle2
+                        size={16}
+                        className="text-accent flex-shrink-0"
+                      />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -103,7 +117,9 @@ export default function ServiceDetail({
         ) : (
           <>
             <div>
-              <p className="font-display text-[11px] tracking-[0.14em] text-accent mb-3">{num}</p>
+              <p className="font-display text-[11px] tracking-[0.14em] text-accent mb-3">
+                {num}
+              </p>
               <SectionLabel>{subtitle}</SectionLabel>
               <h2
                 id={id}
@@ -119,8 +135,14 @@ export default function ServiceDetail({
                 </h3>
                 <ul className="flex flex-col gap-3">
                   {included.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-sm text-charcoal">
-                      <CheckCircle2 size={16} className="text-accent flex-shrink-0" />
+                    <li
+                      key={item}
+                      className="flex items-center gap-3 text-sm text-charcoal"
+                    >
+                      <CheckCircle2
+                        size={16}
+                        className="text-accent flex-shrink-0"
+                      />
                       <span>{item}</span>
                     </li>
                   ))}

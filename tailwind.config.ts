@@ -24,10 +24,22 @@ const config: Config = {
         body: ["var(--font-body)", "sans-serif"],
       },
       fontSize: {
-        "display-xl": ["clamp(60px, 8vw, 110px)", { lineHeight: "0.88", fontWeight: "800" }],
-        "display-lg": ["clamp(40px, 5vw, 72px)", { lineHeight: "0.92", fontWeight: "800" }],
-        "display-md": ["clamp(28px, 3.5vw, 48px)", { lineHeight: "1.0", fontWeight: "700" }],
-        "display-sm": ["clamp(20px, 2.5vw, 28px)", { lineHeight: "1.1", fontWeight: "700" }],
+        "display-xl": [
+          "clamp(60px, 8vw, 110px)",
+          { lineHeight: "0.88", fontWeight: "800" },
+        ],
+        "display-lg": [
+          "clamp(40px, 5vw, 72px)",
+          { lineHeight: "0.92", fontWeight: "800" },
+        ],
+        "display-md": [
+          "clamp(28px, 3.5vw, 48px)",
+          { lineHeight: "1.0", fontWeight: "700" },
+        ],
+        "display-sm": [
+          "clamp(20px, 2.5vw, 28px)",
+          { lineHeight: "1.1", fontWeight: "700" },
+        ],
       },
       spacing: {
         18: "72px",

@@ -6,6 +6,13 @@ type SectionLabelProps = {
   centered?: boolean;
 };
 
-export default function SectionLabel({ children, centered = false }: SectionLabelProps) {
-  return <div className={clsx("eyebrow-label", centered && "justify-center")}>{children}</div>;
+export default function SectionLabel({
+  children,
+  centered = false,
+}: SectionLabelProps) {
+  return (
+    <div className={clsx("eyebrow-label", centered && "justify-center")}>
+      {children}
+    </div>
+  );
 }

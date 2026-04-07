@@ -4,7 +4,9 @@ import SectionLabel from "@/components/SectionLabel";
 import CTABand from "@/components/CTABand";
 import FAQAccordion from "@/components/FAQAccordion";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
-import ServiceDetail, { type ServiceDetailProps } from "@/components/services/ServiceDetail";
+import ServiceDetail, {
+  type ServiceDetailProps,
+} from "@/components/services/ServiceDetail";
 
 export const metadata: Metadata = {
   title: "Electrical Works, Earthing & Security Services",
@@ -26,7 +28,8 @@ const services: ServiceDetailProps[] = [
     id: "electrical",
     title: "INDUSTRIAL & COMMERCIAL\nELECTRICAL INSTALLATION",
     subtitle: "Electrical Works",
-    description: "HT/LT panels, cable laying, transformers, switchgear, power factor correction.",
+    description:
+      "HT/LT panels, cable laying, transformers, switchgear, power factor correction.",
     included: [
       "HT/LT Panel Installation & Commissioning",
       "Cable Laying & Termination",
@@ -35,7 +38,12 @@ const services: ServiceDetailProps[] = [
       "Load Testing & Documentation",
       "Power Factor Correction",
     ],
-    industries: ["Factories", "Warehouses", "Commercial Buildings", "Government Facilities"],
+    industries: [
+      "Factories",
+      "Warehouses",
+      "Commercial Buildings",
+      "Government Facilities",
+    ],
     layout: "image-left",
     background: "white",
     imageGradient: "linear-gradient(135deg, #0a1628 0%, #1a2f4a 100%)",
@@ -46,7 +54,8 @@ const services: ServiceDetailProps[] = [
     id: "earthing",
     title: "PRECISION EARTHING —\nIS 3043 COMPLIANT",
     subtitle: "Earthing Solutions",
-    description: "IS 3043 compliant conventional and chemical earthing, lightning protection.",
+    description:
+      "IS 3043 compliant conventional and chemical earthing, lightning protection.",
     included: [
       "Soil Resistivity Testing",
       "Conventional Plate/Pipe Earthing",
@@ -55,7 +64,12 @@ const services: ServiceDetailProps[] = [
       "Earth Continuity Testing & Reports",
       "Maintenance & Re-testing",
     ],
-    industries: ["Industrial Plants", "Data Centers", "Telecom Towers", "Government Buildings"],
+    industries: [
+      "Industrial Plants",
+      "Data Centers",
+      "Telecom Towers",
+      "Government Buildings",
+    ],
     layout: "image-right",
     background: "off-white",
     imageGradient: "linear-gradient(135deg, #0d1a0d 0%, #1a3a2f 100%)",
@@ -66,7 +80,8 @@ const services: ServiceDetailProps[] = [
     id: "security",
     title: "INTEGRATED SECURITY\nINFRASTRUCTURE",
     subtitle: "Security Systems",
-    description: "CCTV, access control, biometric, fire detection, perimeter security.",
+    description:
+      "CCTV, access control, biometric, fire detection, perimeter security.",
     included: [
       "CCTV Surveillance System Design & Install",
       "Access Control & Biometrics",
@@ -75,7 +90,12 @@ const services: ServiceDetailProps[] = [
       "Video Management Software",
       "Annual Maintenance Contract (AMC)",
     ],
-    industries: ["Factories", "Corporate Offices", "Warehouses", "Residential Complexes"],
+    industries: [
+      "Factories",
+      "Corporate Offices",
+      "Warehouses",
+      "Residential Complexes",
+    ],
     layout: "image-left",
     background: "white",
     imageGradient: "linear-gradient(135deg, #1a0d2a 0%, #2a1a3a 100%)",
@@ -95,7 +115,12 @@ const services: ServiceDetailProps[] = [
       "Contract Labour Act Compliant",
       "Rapid Mobilization (5-7 working days)",
     ],
-    industries: ["EPC Contractors", "Plant Operators", "Facility Managers", "Project Developers"],
+    industries: [
+      "EPC Contractors",
+      "Plant Operators",
+      "Facility Managers",
+      "Project Developers",
+    ],
     layout: "image-right",
     background: "off-white",
     imageGradient: "linear-gradient(135deg, #1a1a0d 0%, #2a2a1a 100%)",
@@ -107,26 +132,36 @@ const industries = [
   {
     icon: Building2,
     title: "Industrial/Manufacturing",
-    description: "Plant-scale systems and process-critical electrical infrastructure.",
+    description:
+      "Plant-scale systems and process-critical electrical infrastructure.",
   },
   {
     icon: Briefcase,
     title: "Commercial",
-    description: "Safe and scalable installations for offices and commercial facilities.",
+    description:
+      "Safe and scalable installations for offices and commercial facilities.",
   },
   {
     icon: Landmark,
     title: "Government/PSU",
-    description: "Compliance-led execution for public and institutional projects.",
+    description:
+      "Compliance-led execution for public and institutional projects.",
   },
   {
     icon: HardHat,
     title: "Infrastructure/EPC",
-    description: "Reliable support for EPC timelines, quality, and safety goals.",
+    description:
+      "Reliable support for EPC timelines, quality, and safety goals.",
   },
 ] as const;
 
-const certifications = ["IS 3043", "IS 732", "IEC 60364", "BIS Certified", "ISO 9001:2015"];
+const certifications = [
+  "IS 3043",
+  "IS 732",
+  "IEC 60364",
+  "BIS Certified",
+  "ISO 9001:2015",
+];
 
 export default function ServicesPage() {
   return (
@@ -135,10 +170,13 @@ export default function ServicesPage() {
         <section className="bg-black py-28 text-center">
           <div className="container-width">
             <SectionLabel centered>What We Offer</SectionLabel>
-            <h1 className="font-display text-display-xl font-extrabold uppercase text-white mt-4">OUR SERVICES</h1>
+            <h1 className="font-display text-display-xl font-extrabold uppercase text-white mt-4">
+              OUR SERVICES
+            </h1>
             <p className="body-light text-white/65 max-w-[580px] mx-auto mt-5 text-[17px]">
-              Complete electrical, earthing, security, and manpower solutions - engineered for industrial,
-              commercial, and government projects across India.
+              Complete electrical, earthing, security, and manpower solutions -
+              engineered for industrial, commercial, and government projects
+              across India.
             </p>
           </div>
         </section>
@@ -155,7 +193,9 @@ export default function ServicesPage() {
           <div className="container-width">
             <div className="text-center">
               <SectionLabel centered>Industries</SectionLabel>
-              <h2 className="mt-4 font-display text-display-md font-extrabold uppercase text-white">WHO WE WORK WITH</h2>
+              <h2 className="mt-4 font-display text-display-md font-extrabold uppercase text-white">
+                WHO WE WORK WITH
+              </h2>
             </div>
 
             <div className="mt-12 grid gap-4 lg:grid-cols-4 md:grid-cols-2">
@@ -168,8 +208,12 @@ export default function ServicesPage() {
                     className="rounded-[6px] border border-white/8 bg-[#1a1a1a] p-8 transition-all hover:border-accent/30 hover:bg-[#1e1e1e]"
                   >
                     <Icon size={32} className="text-accent" />
-                    <h3 className="mt-4 font-display text-[17px] uppercase text-white">{industry.title}</h3>
-                    <p className="mt-2 font-body text-sm text-white/50">{industry.description}</p>
+                    <h3 className="mt-4 font-display text-[17px] uppercase text-white">
+                      {industry.title}
+                    </h3>
+                    <p className="mt-2 font-body text-sm text-white/50">
+                      {industry.description}
+                    </p>
                   </article>
                 );
               })}

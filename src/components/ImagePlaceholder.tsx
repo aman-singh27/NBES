@@ -6,7 +6,11 @@ type ImagePlaceholderProps = {
   className?: string;
 };
 
-export default function ImagePlaceholder({ gradient, label, className }: ImagePlaceholderProps) {
+export default function ImagePlaceholder({
+  gradient,
+  label,
+  className,
+}: ImagePlaceholderProps) {
   return (
     <div
       role="img"

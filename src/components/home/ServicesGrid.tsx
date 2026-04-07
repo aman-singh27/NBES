@@ -11,7 +11,12 @@ const services = [
     icon: Zap,
     title: "Electrical Works",
     desc: "High-voltage and low-voltage installation services built for industrial and commercial reliability.",
-    features: ["HT/LT Panels", "Cable Laying", "Transformer Works", "Load Testing"],
+    features: [
+      "HT/LT Panels",
+      "Cable Laying",
+      "Transformer Works",
+      "Load Testing",
+    ],
     href: "/services#electrical",
   },
   {
@@ -19,7 +24,12 @@ const services = [
     icon: Anchor,
     title: "Earthing Solutions",
     desc: "IS 3043-compliant earthing systems with scientific testing and complete report documentation.",
-    features: ["Soil Testing", "Chemical Earthing", "Lightning Protection", "Continuity Reports"],
+    features: [
+      "Soil Testing",
+      "Chemical Earthing",
+      "Lightning Protection",
+      "Continuity Reports",
+    ],
     href: "/services#earthing",
   },
   {
@@ -35,7 +45,12 @@ const services = [
     icon: Users,
     title: "Technical Manpower",
     desc: "Certified electricians, supervisors, and project support teams available for short and long contracts.",
-    features: ["ITI Certified Teams", "Insured Workforce", "Rapid Mobilization", "Contract Compliant"],
+    features: [
+      "ITI Certified Teams",
+      "Insured Workforce",
+      "Rapid Mobilization",
+      "Contract Compliant",
+    ],
     href: "/services#manpower",
   },
 ] as const;
@@ -55,8 +70,8 @@ export default function ServicesGrid() {
               </h2>
             </div>
             <p className="body-light text-[17px]">
-              From high-voltage installations to intelligent security infrastructure - all compliant with IS, IEC,
-              and BIS standards.
+              From high-voltage installations to intelligent security
+              infrastructure - all compliant with IS, IEC, and BIS standards.
             </p>
           </div>
         </ScrollRevealBlock>
@@ -76,18 +91,30 @@ export default function ServicesGrid() {
               >
                 <span className="absolute left-0 right-0 top-0 h-[3px] origin-left scale-x-0 bg-accent transition-transform duration-[350ms] group-hover:scale-x-100" />
 
-                <p className="mb-6 font-display text-[11px] font-bold tracking-[0.14em] text-accent">{service.num} -</p>
+                <p className="mb-6 font-display text-[11px] font-bold tracking-[0.14em] text-accent">
+                  {service.num} -
+                </p>
 
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-[10px] bg-accent-light transition-colors group-hover:bg-accent">
-                  <Icon size={24} className="text-accent transition-colors group-hover:text-white" />
+                  <Icon
+                    size={24}
+                    className="text-accent transition-colors group-hover:text-white"
+                  />
                 </div>
 
-                <h3 className="mb-3 font-display text-[24px] font-bold uppercase text-black">{service.title}</h3>
-                <p className="mb-6 font-body text-sm leading-[1.65] text-mid-grey">{service.desc}</p>
+                <h3 className="mb-3 font-display text-[24px] font-bold uppercase text-black">
+                  {service.title}
+                </h3>
+                <p className="mb-6 font-body text-sm leading-[1.65] text-mid-grey">
+                  {service.desc}
+                </p>
 
                 <ul className="flex flex-col gap-2">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-[10px] text-sm text-charcoal">
+                    <li
+                      key={feature}
+                      className="flex items-center gap-[10px] text-sm text-charcoal"
+                    >
                       <span className="h-[6px] w-[6px] flex-shrink-0 rounded-full bg-accent" />
                       <span>{feature}</span>
                     </li>
@@ -99,7 +126,10 @@ export default function ServicesGrid() {
                   className="group/link mt-7 inline-flex items-center gap-[6px] font-display text-[13px] font-bold uppercase text-accent"
                 >
                   Explore Service
-                  <ArrowRight size={14} className="transition-transform group-hover/link:translate-x-[6px]" />
+                  <ArrowRight
+                    size={14}
+                    className="transition-transform group-hover/link:translate-x-[6px]"
+                  />
                 </Link>
               </article>
             );

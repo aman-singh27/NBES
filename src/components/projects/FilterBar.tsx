@@ -1,6 +1,12 @@
 "use client";
 
-const categories = ["All", "Electrical", "Earthing", "Security", "Manpower"] as const;
+const categories = [
+  "All",
+  "Electrical",
+  "Earthing",
+  "Security",
+  "Manpower",
+] as const;
 
 export type FilterCategory = (typeof categories)[number];
 
@@ -9,7 +15,10 @@ type FilterBarProps = {
   onChange: (category: FilterCategory) => void;
 };
 
-export default function FilterBar({ activeCategory, onChange }: FilterBarProps) {
+export default function FilterBar({
+  activeCategory,
+  onChange,
+}: FilterBarProps) {
   return (
     <div className="mb-10 flex flex-wrap justify-center gap-3">
       {categories.map((category) => {

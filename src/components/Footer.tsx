@@ -22,8 +22,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[2fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[4px] bg-white text-[20px] font-extrabold text-black">
-                N
+              <span
+                aria-hidden="true"
+                className="flex h-[38px] w-[38px] items-center justify-center rounded-[4px] bg-white"
+              >
+                <span className="h-3.5 w-3.5 rounded-[2px] border border-black/70" />
               </span>
               <span className="font-display text-[22px] font-extrabold tracking-[0.06em] text-white">
                 NBES
@@ -120,10 +123,10 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-white/8 pt-5 font-body text-[12px] text-white/45 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} NBES. All rights reserved.</p>
           <div className="flex gap-5">
-            <Link href="/" className="transition-colors hover:text-white">
+            <Link href="/privacy" className="transition-colors hover:text-white">
               Privacy
             </Link>
-            <Link href="/" className="transition-colors hover:text-white">
+            <Link href="/terms" className="transition-colors hover:text-white">
               Terms
             </Link>
           </div>

@@ -17,7 +17,7 @@ const services = [
       "Transformer Works",
       "Load Testing",
     ],
-    href: "/services#electrical",
+    href: "/services/electrical-works",
   },
   {
     num: "02",
@@ -30,7 +30,7 @@ const services = [
       "Lightning Protection",
       "Continuity Reports",
     ],
-    href: "/services#earthing",
+    href: "/services/earthing-solutions",
   },
   {
     num: "03",
@@ -38,7 +38,7 @@ const services = [
     title: "Security Systems",
     desc: "Integrated surveillance and access-control infrastructure for factory, office, and campus security.",
     features: ["CCTV Systems", "Access Control", "Fire Alarms", "AMC Support"],
-    href: "/services#security",
+    href: "/services/security-systems",
   },
   {
     num: "04",
@@ -51,7 +51,7 @@ const services = [
       "Rapid Mobilization",
       "Contract Compliant",
     ],
-    href: "/services#manpower",
+    href: "/services/technical-manpower",
   },
 ] as const;
 

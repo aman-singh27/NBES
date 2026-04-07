@@ -116,9 +116,12 @@ const processSteps: ProcessStep[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "About NBES | 15+ Years in Electrical & Technical Services",
+  title: "About Us - New Bharat Engineer Services",
   description:
-    "Learn about NBES — India's trusted B2B electrical contractor with 15+ years, 300+ projects, IS/IEC certified teams across multiple states.",
+    "NBES is a certified electrical and technical services company serving industrial, commercial, and government clients across India with IS, IEC, and BIS-compliant execution.",
+  alternates: {
+    canonical: "https://nbes.vercel.app/about",
+  },
 };
 
 export default function AboutPage() {

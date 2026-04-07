@@ -15,6 +15,7 @@ export type ServiceDetailProps = {
   imageLabel: string;
   layout: "image-left" | "image-right";
   background: "white" | "off-white";
+  href: string;
 };
 
 export default function ServiceDetail({
@@ -29,6 +30,7 @@ export default function ServiceDetail({
   imageLabel,
   layout,
   background,
+  href,
 }: ServiceDetailProps) {
   const isImageLeft = layout === "image-left";
 
@@ -107,10 +109,10 @@ export default function ServiceDetail({
               </div>
 
               <Link
-                href="/contact"
+                href={href}
                 className="mt-8 inline-flex items-center font-display text-[13px] font-bold uppercase tracking-[0.08em] text-charcoal transition-colors hover:text-accent"
               >
-                Get a Quote for This Service &rarr;
+                Explore This Service &rarr;
               </Link>
             </div>
           </>
@@ -166,10 +168,10 @@ export default function ServiceDetail({
               </div>
 
               <Link
-                href="/contact"
+                href={href}
                 className="mt-8 inline-flex items-center font-display text-[13px] font-bold uppercase tracking-[0.08em] text-charcoal transition-colors hover:text-accent"
               >
-                Get a Quote for This Service &rarr;
+                Explore This Service &rarr;
               </Link>
             </div>
 

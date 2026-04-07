@@ -1,36 +1,70 @@
 import type { MetadataRoute } from "next";
+import { projects } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://nbes.vercel.app";
+  const lastModified = new Date();
+
   return [
     {
-      url: "https://nbes.in",
-      lastModified: new Date(),
+      url: baseUrl,
+      lastModified,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://nbes.in/services",
-      lastModified: new Date(),
+      url: `${baseUrl}/services`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://nbes.in/projects",
-      lastModified: new Date(),
+      url: `${baseUrl}/services/electrical-works`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://nbes.in/about",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
+      url: `${baseUrl}/services/earthing-solutions`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/security-systems`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/technical-manpower`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/projects`,
+      lastModified,
+      changeFrequency: "weekly",
       priority: 0.7,
     },
     {
-      url: "https://nbes.in/contact",
-      lastModified: new Date(),
+      url: `${baseUrl}/about`,
+      lastModified,
       changeFrequency: "yearly",
-      priority: 0.8,
+      priority: 0.6,
     },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
+    ...projects.map((project) => ({
+      url: `${baseUrl}/projects/${project.slug}`,
+      lastModified,
+      changeFrequency: "yearly" as const,
+      priority: 0.6,
+    })),
   ];
 }

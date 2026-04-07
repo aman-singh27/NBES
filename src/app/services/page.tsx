@@ -4,14 +4,19 @@ import SectionLabel from "@/components/SectionLabel";
 import CTABand from "@/components/CTABand";
 import FAQAccordion from "@/components/FAQAccordion";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
+import { FAQSchema } from "@/components/seo/JsonLd";
 import ServiceDetail, {
   type ServiceDetailProps,
 } from "@/components/services/ServiceDetail";
+import { faqItems } from "@/data/faqs";
 
 export const metadata: Metadata = {
-  title: "Electrical Works, Earthing & Security Services",
+  title: "Electrical, Earthing, Security & Manpower Services",
   description:
-    "NBES provides certified electrical works, IS 3043 earthing solutions, security system installation, and technical manpower across India. 15+ years, 300+ projects.",
+    "NBES offers industrial electrical installation, IS 3043-compliant earthing, integrated CCTV & access control, and ITI-certified technical manpower. Serving Maharashtra, Telangana, Gujarat and pan-India.",
+  alternates: {
+    canonical: "https://nbes.vercel.app/services",
+  },
   keywords: [
     "electrical contractor India",
     "earthing solutions",
@@ -48,6 +53,7 @@ const services: ServiceDetailProps[] = [
     background: "white",
     imageGradient: "linear-gradient(135deg, #0a1628 0%, #1a2f4a 100%)",
     imageLabel: "Electrical panel installation",
+    href: "/services/electrical-works",
   },
   {
     num: "02",
@@ -74,6 +80,7 @@ const services: ServiceDetailProps[] = [
     background: "off-white",
     imageGradient: "linear-gradient(135deg, #0d1a0d 0%, #1a3a2f 100%)",
     imageLabel: "Earthing installation",
+    href: "/services/earthing-solutions",
   },
   {
     num: "03",
@@ -100,6 +107,7 @@ const services: ServiceDetailProps[] = [
     background: "white",
     imageGradient: "linear-gradient(135deg, #1a0d2a 0%, #2a1a3a 100%)",
     imageLabel: "Security system installation",
+    href: "/services/security-systems",
   },
   {
     num: "04",
@@ -125,6 +133,7 @@ const services: ServiceDetailProps[] = [
     background: "off-white",
     imageGradient: "linear-gradient(135deg, #1a1a0d 0%, #2a2a1a 100%)",
     imageLabel: "Technical team on site",
+    href: "/services/technical-manpower",
   },
 ];
 
@@ -242,6 +251,10 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
+      </ScrollRevealBlock>
+
+      <ScrollRevealBlock>
+        <FAQSchema faqs={faqItems} />
       </ScrollRevealBlock>
 
       <ScrollRevealBlock>

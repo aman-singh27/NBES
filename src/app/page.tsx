@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, GitMerge, ShieldCheck } from "lucide-react";
 import CTABand from "@/components/CTABand";
@@ -8,6 +9,15 @@ import Testimonials from "@/components/home/Testimonials";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 import StatsCounter from "@/components/StatsCounter";
+
+export const metadata: Metadata = {
+  title: "Industrial Electrical Works, Earthing & Security Solutions India",
+  description:
+    "New Bharat Engineer Services (NBES) delivers HT/LT panel installation, IS 3043 earthing, CCTV security, and certified electrical manpower for factories, commercial buildings, and government projects across India.",
+  alternates: {
+    canonical: "https://nbes.vercel.app/",
+  },
+};
 
 const logos = [
   "Client Co.",
@@ -38,6 +48,15 @@ const whyItems = [
     icon: ShieldCheck,
   },
 ] as const;
+
+const serviceAreas = [
+  "Nagpur",
+  "Pune",
+  "Mumbai",
+  "Hyderabad",
+  "Gujarat",
+  "Pan-India Mobilization",
+];
 
 export default function Home() {
   return (
@@ -120,6 +139,38 @@ export default function Home() {
       </section>
 
       <Testimonials />
+
+      <ScrollRevealBlock>
+        <section className="bg-black section-padding text-white">
+          <div className="container-width grid gap-10 lg:grid-cols-[40fr_60fr] lg:items-start">
+            <div>
+              <SectionLabel centered={false}>Service Areas</SectionLabel>
+              <h2 className="mt-3 font-display text-display-md font-extrabold uppercase text-white">
+                WHERE WE WORK
+              </h2>
+            </div>
+            <div>
+              <p className="max-w-[720px] font-body text-[17px] font-light leading-[1.75] text-white/70">
+                New Bharat Engineer Services executes projects across India,
+                with active presence in Maharashtra, Telangana, Gujarat, and
+                other industrial corridors. We mobilise teams pan-India for
+                project requirements.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {serviceAreas.map((area) => (
+                  <span
+                    key={area}
+                    className="rounded-[999px] border border-white/10 bg-white/5 px-4 py-2 font-body text-sm text-white/80"
+                  >
+                    {area}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollRevealBlock>
+
       <CTABand />
     </>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
@@ -11,6 +12,7 @@ export type ProjectCategory = Exclude<FilterCategory, "All">;
 
 export type ProjectItem = {
   id: number;
+  slug: string;
   title: string;
   location: string;
   category: ProjectCategory;
@@ -130,6 +132,12 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
                           {project.location}
                         </p>
                       </div>
+
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        aria-label={`View ${project.title} in ${project.location}`}
+                        className="absolute inset-0 z-20"
+                      />
 
                       <div className="absolute bottom-5 right-5 z-10 flex items-center gap-1 font-display text-[12px] uppercase text-white opacity-0 transition-opacity group-hover:opacity-80">
                         <span>View Project</span>

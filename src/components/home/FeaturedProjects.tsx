@@ -5,36 +5,7 @@ import { ArrowRight } from "lucide-react";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import SectionLabel from "@/components/SectionLabel";
-
-type Project = {
-  title: string;
-  location: string;
-  category: string;
-  gradient: string;
-  large?: boolean;
-};
-
-const projects: Project[] = [
-  {
-    title: "Steel Plant Earthing & HT Panel Installation",
-    location: "Nagpur, Maharashtra",
-    category: "Earthing",
-    gradient: "linear-gradient(135deg, #0d1f3c, #1a2f4a)",
-    large: true,
-  },
-  {
-    title: "Corporate Office Security System",
-    location: "Hyderabad, Telangana",
-    category: "Security",
-    gradient: "linear-gradient(135deg, #1a2a1a, #0d1a0d)",
-  },
-  {
-    title: "Municipal Substation Upgrade",
-    location: "Pune, Maharashtra",
-    category: "Electrical",
-    gradient: "linear-gradient(135deg, #1a1a2e, #2a2a3e)",
-  },
-];
+import { projects } from "@/data/projects";
 
 export default function FeaturedProjects() {
   return (
@@ -66,16 +37,23 @@ export default function FeaturedProjects() {
 
         <div className="grid grid-cols-1 gap-[2px] bg-border lg:grid-cols-[2fr_1fr] lg:grid-rows-2">
           {projects.map((project, index) => (
-            <article
-              key={project.title}
-              className={`group relative overflow-hidden ${
+            <Link
+              key={project.slug}
+              href={`/projects/${project.slug}`}
+              className={`group relative block overflow-hidden ${
                 index === 0
                   ? "aspect-[4/3] lg:row-span-2 lg:h-full"
                   : "aspect-[4/3]"
               }`}
             >
               <ImagePlaceholder
-                gradient={project.gradient}
+                gradient={
+                  project.category === "Earthing"
+                    ? "linear-gradient(135deg, #0d1f3c, #1a2f4a)"
+                    : project.category === "Security"
+                      ? "linear-gradient(135deg, #1a2a1a, #0d1a0d)"
+                      : "linear-gradient(135deg, #1a1a2e, #2a2a3e)"
+                }
                 label={project.title}
                 className="absolute inset-0 h-full w-full border-0 transition-transform duration-500 group-hover:scale-[1.04]"
               />
@@ -100,7 +78,7 @@ export default function FeaturedProjects() {
                 <span>View Project</span>
                 <span aria-hidden="true">&rarr;</span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

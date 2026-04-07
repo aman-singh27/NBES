@@ -8,57 +8,30 @@ import SectionLabel from "@/components/SectionLabel";
 import ProjectGrid, {
   type ProjectItem,
 } from "@/components/projects/ProjectGrid";
+import { projects as projectData } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Completed Projects | Electrical, Earthing & Security Portfolio",
+  title: "Completed Projects - Industrial & Commercial Electrical Works",
   description:
-    "View NBES's completed projects — industrial electrical, earthing systems, security installations across Maharashtra, Telangana, Gujarat and more.",
+    "View NBES project portfolio: steel plant earthing, HT panel installation, corporate security systems, and municipal substation upgrades across India.",
+  alternates: {
+    canonical: "https://nbes.vercel.app/projects",
+  },
 };
 
-const projects: ProjectItem[] = [
-  {
-    id: 1,
-    title: "Steel Plant Earthing & HT Panel Installation",
-    location: "Nagpur, Maharashtra",
-    category: "Earthing",
-    gradient: "linear-gradient(135deg, #0d1f3c, #1a2f4a)",
-  },
-  {
-    id: 2,
-    title: "Corporate Office Security System",
-    location: "Hyderabad, Telangana",
-    category: "Security",
-    gradient: "linear-gradient(135deg, #1a2a1a, #0d1a0d)",
-  },
-  {
-    id: 3,
-    title: "Municipal Substation Upgrade",
-    location: "Pune, Maharashtra",
-    category: "Electrical",
-    gradient: "linear-gradient(135deg, #1a1a2e, #2a2a3e)",
-  },
-  {
-    id: 4,
-    title: "Chemical Plant Electrical Audit",
-    location: "Ankleshwar, Gujarat",
-    category: "Electrical",
-    gradient: "linear-gradient(135deg, #2a1a0d, #3a2a1a)",
-  },
-  {
-    id: 5,
-    title: "Auto OEM Manpower Contract — 12 Months",
-    location: "Chakan, Pune",
-    category: "Manpower",
-    gradient: "linear-gradient(135deg, #0d1a2a, #1a2a3a)",
-  },
-  {
-    id: 6,
-    title: "Factory Perimeter CCTV System",
-    location: "Aurangabad, Maharashtra",
-    category: "Security",
-    gradient: "linear-gradient(135deg, #1a0d2a, #2a1a3a)",
-  },
-];
+const projects: ProjectItem[] = projectData.map((project, index) => ({
+  id: index + 1,
+  slug: project.slug,
+  title: project.title,
+  location: project.location,
+  category: project.category as ProjectItem["category"],
+  gradient:
+    project.category === "Earthing"
+      ? "linear-gradient(135deg, #0d1f3c, #1a2f4a)"
+      : project.category === "Security"
+        ? "linear-gradient(135deg, #1a2a1a, #0d1a0d)"
+        : "linear-gradient(135deg, #1a1a2e, #2a2a3e)",
+}));
 
 export default function ProjectsPage() {
   return (

@@ -6,17 +6,20 @@ import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Contact NBES | Get a Quote",
+  title: "Contact NBES - Get a Quote for Electrical & Earthing Works",
   description:
-    "Get in touch with NBES for a quote on electrical works, earthing solutions, security systems, or technical manpower. Respond within 24 hours.",
+    "Contact New Bharat Engineer Services for a project quote. We respond within 24 hours for electrical works, earthing systems, security installation, and manpower supply.",
+  alternates: {
+    canonical: "https://nbes.vercel.app/contact",
+  },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "NBES",
-  "@id": "https://nbes.in",
-  url: "https://nbes.in",
+  "@id": "https://nbes.vercel.app",
+  url: "https://nbes.vercel.app",
   telephone: "+91-XXXXXXXXXX",
   email: "info@nbes.in",
   address: {

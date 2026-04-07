@@ -72,13 +72,13 @@ export default function Hero() {
           <motion.h1
             variants={itemVariants}
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 font-display text-[clamp(56px,8vw,110px)] font-extrabold uppercase leading-[0.88] text-white"
+            className="mt-4 font-display text-[clamp(48px,7vw,100px)] font-extrabold uppercase leading-[0.92] text-white"
           >
-            POWER.
+            Industrial Electrical Works
             <br />
-            <span className="text-accent">SAFETY.</span>
+            <span className="text-accent">& Earthing Solutions</span>
             <br />
-            RELIABILITY.
+            New Bharat Engineer Services
           </motion.h1>
 
           <motion.p
@@ -86,9 +86,19 @@ export default function Hero() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 max-w-[460px] font-body text-[17px] font-light leading-[1.75] text-white/65"
           >
-            NBES delivers certified electrical works, precision earthing,
-            integrated security, and skilled technical manpower - for
-            industrial, commercial, and government projects across India.
+            NBES - New Bharat Engineer Services - delivers IS 3043-certified
+            earthing systems, industrial HT/LT electrical installation,
+            integrated CCTV and access control security, and ITI-certified
+            technical manpower for factories, commercial buildings, and
+            government projects across India.
+          </motion.p>
+
+          <motion.p
+            variants={itemVariants}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-4 font-display text-[13px] font-bold uppercase tracking-[0.14em] text-white/55"
+          >
+            Power. Safety. Reliability.
           </motion.p>
 
           <motion.div

@@ -18,6 +18,12 @@ export default function NotFound() {
         >
           Back to Home
         </Link>
+        <Link
+          href="/services"
+          className="mt-4 ml-3 inline-flex rounded-btn border border-white/15 px-7 py-[14px] font-display text-[14px] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:border-white hover:bg-white/5"
+        >
+          View Services
+        </Link>
       </div>
     </section>
   );

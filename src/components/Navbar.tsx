@@ -69,8 +69,11 @@ export default function Navbar() {
         className="container-width flex h-full items-center justify-between gap-6"
       >
         <Link href="/" className="inline-flex items-center gap-3">
-          <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[4px] bg-accent font-display text-[20px] font-extrabold text-white">
-            N
+          <span
+            aria-hidden="true"
+            className="flex h-[38px] w-[38px] items-center justify-center rounded-[4px] bg-accent"
+          >
+            <span className="h-3.5 w-3.5 rounded-[2px] border border-white/70" />
           </span>
           <span className="font-display text-[22px] font-extrabold tracking-[0.06em] text-black">
             NBES

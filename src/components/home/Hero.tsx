@@ -15,10 +15,10 @@ type HeroStat = {
 };
 
 const stats: HeroStat[] = [
-  { num: 15, suffix: "+", label: "Years" },
-  { num: 300, suffix: "+", label: "Projects" },
-  { num: 8, suffix: "", label: "States" },
-  { num: 50, suffix: "+", label: "Technicians" },
+  { num: 20, suffix: "+", label: "Years" },
+  { num: 8, suffix: "+", label: "Clients" },
+  { num: 2, suffix: "", label: "Offices" },
+  { num: 7, suffix: "+", label: "Services" },
 ];
 
 function HeroStatItem({ stat }: { stat: HeroStat }) {
@@ -74,11 +74,11 @@ export default function Hero() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 font-display text-[clamp(48px,7vw,100px)] font-extrabold uppercase leading-[0.92] text-white"
           >
-            Industrial Electrical Works
+            Electrical & Facility
             <br />
-            <span className="text-accent">& Earthing Solutions</span>
+            <span className="text-accent">Services Delhi-NCR</span>
             <br />
-            New Bharat Engineer Services
+            New Bharat Engineering Services
           </motion.h1>
 
           <motion.p
@@ -86,11 +86,10 @@ export default function Hero() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 max-w-[460px] font-body text-[17px] font-light leading-[1.75] text-white/65"
           >
-            NBES - New Bharat Engineer Services - delivers IS 3043-certified
-            earthing systems, industrial HT/LT electrical installation,
-            integrated CCTV and access control security, and ITI-certified
-            technical manpower for factories, commercial buildings, and
-            government projects across India.
+            NBES - New Bharat Engineering Services - has delivered reliable
+            electrical, plumbing, civil, CCTV, earthing, carpentry, and
+            interior services for corporate offices across Delhi-NCR since
+            2003. Trusted by HCL, Nestle, Deloitte, and leading organizations.
           </motion.p>
 
           <motion.p
@@ -98,7 +97,7 @@ export default function Hero() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 font-display text-[13px] font-bold uppercase tracking-[0.14em] text-white/55"
           >
-            Power. Safety. Reliability.
+            Reliability. Quality. On Time.
           </motion.p>
 
           <motion.div
@@ -118,7 +117,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="https://wa.me/910000000000"
+              href="https://wa.me/919999060083"
               className="inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-[0.06em] text-white/70 transition-colors hover:text-white"
             >
               <MessageCircle size={18} fill="#25D366" stroke="none" />

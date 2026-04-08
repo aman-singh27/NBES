@@ -7,59 +7,59 @@ import SectionLabel from "@/components/SectionLabel";
 import { ServiceSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Skilled Facility Workforce - On-Call Technicians Delhi-NCR",
+  title: "Civil & Carpentry Works - Office Repairs and Fit-Outs Delhi-NCR",
   description:
-    "NBES provides skilled technicians for electrical, plumbing, civil, and carpentry work on demand for corporate facilities across Delhi-NCR.",
+    "NBES delivers civil repairs, minor construction, carpentry, and interior works for corporate offices in Gurgaon and Noida. Skilled workforce, minimal disruption.",
   alternates: {
-    canonical: "https://nbes.vercel.app/services/technical-manpower",
+    canonical: "https://nbes.vercel.app/services/civil-carpentry-works",
   },
 };
 
-const manpowerItems = [
-  "Certified electricians and electrical supervisors",
-  "Plumbing technicians",
-  "Civil and carpentry workers",
-  "CCTV and security systems technicians",
-  "Short-term and long-term deployment",
-  "Rapid mobilization across Delhi-NCR",
+const civilCarpentryItems = [
+  "Minor civil repairs and reinstatement works",
+  "Office partition and drywall works",
+  "False ceiling installation and repairs",
+  "Flooring upgrades and patch repairs",
+  "Custom carpentry and joinery",
+  "Interior fit-outs and finishing support",
 ];
 
-export default function TechnicalManpowerPage() {
+export default function CivilCarpentryWorksPage() {
   return (
     <>
       <ServiceSchema
-        name="Skilled Facility Workforce"
-        description="On-call technicians for electrical, plumbing, civil, carpentry, and security support across corporate facilities in Delhi-NCR."
-        url="https://nbes.vercel.app/services/technical-manpower"
+        name="Civil & Carpentry Works"
+        description="Civil repairs, partition works, carpentry, and fit-outs for corporate office facilities across Delhi-NCR."
+        url="https://nbes.vercel.app/services/civil-carpentry-works"
       />
 
       <ScrollRevealBlock>
         <section className="bg-black py-24 text-white">
           <div className="container-width grid gap-12 lg:grid-cols-[58fr_42fr] lg:items-center">
             <div>
-              <SectionLabel>Technical Manpower</SectionLabel>
+              <SectionLabel>Civil & Carpentry</SectionLabel>
               <h1 className="mt-4 font-display text-display-lg font-extrabold uppercase text-white">
-                Skilled Facility
+                Civil & Carpentry Works
                 <br />
-                Workforce On Demand
+                For Corporate Offices
               </h1>
               <p className="mt-5 max-w-[640px] font-body text-[17px] font-light leading-[1.75] text-white/70">
-                New Bharat Engineering Services deploys skilled facility teams
-                for corporate offices and commercial properties across
-                Delhi-NCR. We provide on-call and planned workforce support for
-                electrical, plumbing, civil, carpentry, and security operations.
+                NBES executes office repair and fit-out requirements including
+                civil touch-ups, partition changes, carpentry, and finishing.
+                Our teams plan work around office operations to reduce
+                disruption and maintain site safety.
               </p>
               <Link
                 href="/contact"
                 className="mt-8 inline-flex items-center rounded-btn bg-accent px-6 py-[14px] font-display text-[14px] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-accent-dark"
               >
-                Request Manpower Quote
+                Request Civil & Carpentry Quote
               </Link>
             </div>
 
             <ImagePlaceholder
-              gradient="linear-gradient(135deg, #1a1a0d 0%, #2a2a1a 100%)"
-              label="Skilled facility workforce deployed on site - NBES"
+              gradient="linear-gradient(135deg, #1a1410 0%, #2a2015 100%)"
+              label="Civil and carpentry works for office fit-outs - NBES"
               className="aspect-[4/5] w-full rounded-[8px] border border-white/10"
             />
           </div>
@@ -69,7 +69,7 @@ export default function TechnicalManpowerPage() {
       <ScrollRevealBlock>
         <section className="bg-white section-padding">
           <div className="container-width grid gap-8 lg:grid-cols-3">
-            {manpowerItems.map((item) => (
+            {civilCarpentryItems.map((item) => (
               <article
                 key={item}
                 className="rounded-[6px] border border-border bg-off-white p-6"

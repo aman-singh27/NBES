@@ -10,48 +10,63 @@ export type ProjectRecord = {
 
 export const projects: ProjectRecord[] = [
   {
-    slug: "steel-plant-earthing-nagpur",
-    title: "Steel Plant Earthing & HT Panel Installation",
-    category: "Earthing",
-    location: "Nagpur, Maharashtra",
-    summary:
-      "IS 3043-compliant chemical earthing and HT panel installation for a steel manufacturing facility in Nagpur.",
-    scope: [
-      "Soil resistivity testing",
-      "Chemical earthing system design",
-      "HT panel installation",
-      "Earth continuity testing and documentation",
-    ],
-    image: "/projects/steel-plant.jpg",
-  },
-  {
-    slug: "corporate-office-security-hyderabad",
-    title: "Corporate Office Security System",
-    category: "Security",
-    location: "Hyderabad, Telangana",
-    summary:
-      "Integrated CCTV, biometric access control, and fire alarm installation for a corporate campus in Hyderabad.",
-    scope: [
-      "CCTV system design and installation",
-      "Biometric access control",
-      "Fire alarm integration",
-      "Video management software setup",
-    ],
-    image: "/projects/corporate-security.jpg",
-  },
-  {
-    slug: "municipal-substation-pune",
-    title: "Municipal Substation Upgrade",
+    slug: "corporate-office-electrical-gurgaon",
+    title: "Corporate Office Electrical Maintenance",
     category: "Electrical",
-    location: "Pune, Maharashtra",
+    location: "Gurgaon, Haryana",
     summary:
-      "Complete substation electrical upgrade including LT panels, cable laying, and load testing for a municipal facility in Pune.",
+      "Comprehensive electrical maintenance, panel servicing, and fault rectification for a multi-floor corporate office in Gurgaon.",
     scope: [
-      "LT panel replacement",
-      "Cable laying and termination",
-      "Switchgear upgrade",
-      "Load testing and documentation",
+      "Periodic electrical inspection and maintenance",
+      "Panel servicing and protection testing",
+      "Emergency fault rectification",
+      "Lighting and power circuit upgrades",
     ],
-    image: "/projects/substation.jpg",
+    image: "/projects/corporate-electrical.jpg",
+  },
+  {
+    slug: "cctv-installation-noida-office",
+    title: "CCTV Surveillance System Installation",
+    category: "Security",
+    location: "Noida, Uttar Pradesh",
+    summary:
+      "Design and installation of a complete CCTV surveillance system with remote monitoring for a corporate campus in Noida.",
+    scope: [
+      "Site survey and camera placement design",
+      "IP camera installation and cabling",
+      "NVR and remote monitoring setup",
+      "Access control integration",
+    ],
+    image: "/projects/cctv-noida.jpg",
+  },
+  {
+    slug: "earthing-facility-delhi-ncr",
+    title: "Earthing & Electrical Safety Compliance",
+    category: "Earthing",
+    location: "Delhi-NCR",
+    summary:
+      "Complete earthing system inspection, testing, and rectification to bring a corporate facility into compliance with safety standards.",
+    scope: [
+      "Earth resistance testing",
+      "Chemical earthing installation",
+      "Bonding and grounding checks",
+      "Compliance documentation",
+    ],
+    image: "/projects/earthing-facility.jpg",
+  },
+  {
+    slug: "office-interior-fit-out-gurgaon",
+    title: "Office Interior & Civil Fit-Out",
+    category: "Interior",
+    location: "Gurgaon, Haryana",
+    summary:
+      "End-to-end interior and civil works including false ceiling, flooring, partition, and painting for a corporate office relocation.",
+    scope: [
+      "False ceiling and acoustics",
+      "Flooring and surface works",
+      "Partition and wall works",
+      "Painting and finishing",
+    ],
+    image: "/projects/interior-gurgaon.jpg",
   },
 ];

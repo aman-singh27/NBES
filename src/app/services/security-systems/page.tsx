@@ -7,29 +7,30 @@ import SectionLabel from "@/components/SectionLabel";
 import { ServiceSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Industrial CCTV, Access Control & Fire Alarm Installation India",
+  title:
+    "CCTV Installation Delhi-NCR - Corporate Office Surveillance Systems",
   description:
-    "NBES designs and installs CCTV surveillance, biometric access control, fire detection systems, and perimeter security for factories, corporate offices, and warehouses across India.",
+    "NBES designs and installs CCTV surveillance, access control, and fire alarm systems for corporate offices and commercial properties across Delhi-NCR.",
   alternates: {
     canonical: "https://nbes.vercel.app/services/security-systems",
   },
 };
 
 const securityItems = [
-  "CCTV surveillance system design and installation",
+  "CCTV surveillance design and installation",
   "Biometric and card-based access control",
-  "Fire detection and alarm integration",
-  "Perimeter and intrusion security",
+  "Fire alarm and detection integration",
+  "Monitoring coverage for office floors and entries",
   "Video management software setup",
-  "Annual maintenance contracts",
+  "Preventive maintenance and support",
 ];
 
 export default function SecuritySystemsPage() {
   return (
     <>
       <ServiceSchema
-        name="Industrial CCTV, Access Control & Fire Alarm Installation"
-        description="CCTV surveillance, biometric access control, fire detection systems, and perimeter security for factories, offices, and warehouses across India."
+        name="CCTV Installation Delhi-NCR"
+        description="CCTV, access control, and fire alarm system services for corporate offices and commercial properties across Delhi-NCR."
         url="https://nbes.vercel.app/services/security-systems"
       />
 
@@ -39,14 +40,14 @@ export default function SecuritySystemsPage() {
             <div>
               <SectionLabel>Security Systems</SectionLabel>
               <h1 className="mt-4 font-display text-display-lg font-extrabold uppercase text-white">
-                Industrial CCTV, Access Control
-                <br />& Fire Alarm India
+                CCTV Installation & Access Control
+                <br />Delhi-NCR Corporate Offices
               </h1>
               <p className="mt-5 max-w-[640px] font-body text-[17px] font-light leading-[1.75] text-white/70">
-                We design and install security systems that support factory,
-                office, warehouse, and campus security goals. Our team covers
-                CCTV, biometric access control, fire detection, and perimeter
-                intrusion protection.
+                We design and install integrated security systems for office
+                campuses, corporate floors, and commercial properties. Our team
+                covers CCTV, access control, and fire alarm integration for
+                reliable day-to-day facility security in Delhi-NCR.
               </p>
               <Link
                 href="/contact"

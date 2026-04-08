@@ -3,7 +3,7 @@ import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - New Bharat Engineer Services",
+  title: "Privacy Policy - New Bharat Engineering Services",
   description:
     "Read how NBES handles contact form submissions, inquiry data, and privacy requests.",
   alternates: {
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           </p>
           <p className="mt-4 max-w-[760px] font-body text-[17px] leading-[1.75] text-mid-grey">
             If you want your data updated or removed, contact us at
-            info@nbes.in.
+            contact@nbesindia.com.
           </p>
         </div>
       </section>

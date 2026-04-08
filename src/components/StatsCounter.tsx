@@ -10,10 +10,10 @@ type StatItem = {
 };
 
 const stats: StatItem[] = [
-  { value: 300, suffix: "+", label: "Projects Delivered" },
-  { value: 15, suffix: "+", label: "Years Operating" },
-  { value: 8, suffix: "", label: "States Covered" },
-  { value: 50, suffix: "+", label: "Technicians On-Staff" },
+  { value: 20, suffix: "+", label: "Years Operating" },
+  { value: 8, suffix: "+", label: "Enterprise Clients" },
+  { value: 7, suffix: "+", label: "Service Categories" },
+  { value: 2, suffix: "", label: "Office Locations" },
 ];
 
 type StatCellProps = {

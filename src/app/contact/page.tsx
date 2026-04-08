@@ -6,9 +6,9 @@ import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Contact NBES - Get a Quote for Electrical & Earthing Works",
+  title: "Contact New Bharat Engineering Services - Delhi-NCR Facility Services",
   description:
-    "Contact New Bharat Engineer Services for a project quote. We respond within 24 hours for electrical works, earthing systems, security installation, and manpower supply.",
+    "Contact New Bharat Engineering Services for electrical and facility service requirements across Delhi-NCR. Reach our Gurgaon and Noida teams for fast support.",
   alternates: {
     canonical: "https://nbes.vercel.app/contact",
   },
@@ -17,25 +17,31 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "NBES",
+  name: "New Bharat Engineering Services",
   "@id": "https://nbes.vercel.app",
   url: "https://nbes.vercel.app",
-  telephone: "+91-XXXXXXXXXX",
-  email: "info@nbes.in",
+  telephone: "+91-9999060083",
+  email: "contact@nbesindia.com",
+  foundingDate: "2003",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "366, Saraswati Vihar, Mehrauli Road",
+    addressLocality: "Gurgaon",
+    postalCode: "122001",
+    addressRegion: "Haryana",
     addressCountry: "IN",
   },
-  openingHours: "Mo-Sa 09:00-19:00",
-  areaServed: "India",
+  openingHours: "Mo-Sa 09:00-18:00",
+  areaServed: "Delhi-NCR",
 };
 
-const coveredStates = [
-  "[State 1]",
-  "[State 2]",
-  "[State 3]",
-  "[State 4]",
-  "[State 5]",
+const coveredAreas = [
+  "Gurgaon",
+  "Noida",
+  "Delhi",
+  "Faridabad",
+  "Greater Noida",
+  "NCR Region",
 ];
 
 export default function ContactPage() {
@@ -85,10 +91,13 @@ export default function ContactPage() {
                         Phone
                       </p>
                       <p className="font-body text-[15px] font-medium text-black">
-                        +91 XXXX XXXXXX
+                        0124-4283894
+                      </p>
+                      <p className="font-body text-[15px] font-medium text-black">
+                        +91 99990 60083
                       </p>
                       <p className="mt-1 font-body text-[13px] text-mid-grey">
-                        Mon-Sat, 9am-7pm IST
+                        Mon-Sat, 9am-6pm IST
                       </p>
                     </div>
                   </div>
@@ -105,9 +114,9 @@ export default function ContactPage() {
                         WhatsApp
                       </p>
                       <p className="font-body text-[15px] font-medium text-black">
-                        +91 XXXX XXXXXX{" "}
+                        +91 99990 60083{" "}
                         <a
-                          href="https://wa.me/910000000000"
+                          href="https://wa.me/919999060083"
                           className="text-accent transition-colors hover:text-accent-dark"
                         >
                           Open WhatsApp -&gt;
@@ -131,7 +140,10 @@ export default function ContactPage() {
                         Email
                       </p>
                       <p className="font-body text-[15px] font-medium text-black">
-                        info@nbes.in
+                        contact@nbesindia.com
+                      </p>
+                      <p className="mt-1 font-body text-[13px] text-mid-grey">
+                        nbesindia@gmail.com
                       </p>
                     </div>
                   </div>
@@ -148,10 +160,10 @@ export default function ContactPage() {
                         Location
                       </p>
                       <p className="font-body text-[15px] font-medium text-black">
-                        [Address placeholder]
+                        366, Saraswati Vihar, Mehrauli Road
                       </p>
                       <p className="mt-1 font-body text-[13px] text-mid-grey">
-                        [City], [State], India
+                        Gurgaon, Haryana - 122001
                       </p>
                     </div>
                   </div>
@@ -159,14 +171,14 @@ export default function ContactPage() {
 
                 <div className="my-8 border-t border-border" />
 
-                <p className="eyebrow-label">States We Cover</p>
+                <p className="eyebrow-label">Areas We Serve</p>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {coveredStates.map((state) => (
+                  {coveredAreas.map((area) => (
                     <span
-                      key={state}
+                      key={area}
                       className="rounded-[4px] border border-border bg-off-white px-3 py-[6px] font-body text-[13px] text-charcoal"
                     >
-                      {state}
+                      {area}
                     </span>
                   ))}
                 </div>

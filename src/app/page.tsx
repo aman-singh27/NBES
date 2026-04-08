@@ -11,51 +11,53 @@ import SectionLabel from "@/components/SectionLabel";
 import StatsCounter from "@/components/StatsCounter";
 
 export const metadata: Metadata = {
-  title: "Industrial Electrical Works, Earthing & Security Solutions India",
+  title: "Electrical & Facility Services Delhi-NCR | Since 2003",
   description:
-    "New Bharat Engineer Services (NBES) delivers HT/LT panel installation, IS 3043 earthing, CCTV security, and certified electrical manpower for factories, commercial buildings, and government projects across India.",
+    "New Bharat Engineering Services (NBES) delivers electrical, plumbing, CCTV, earthing, civil, carpentry, and interior works for corporate offices across Delhi-NCR. Serving HCL, Nestle, Deloitte, and more since 2003.",
   alternates: {
     canonical: "https://nbes.vercel.app/",
   },
 };
 
 const logos = [
-  "Client Co.",
-  "Group XYZ",
-  "Industrial Ltd",
-  "Infra Corp",
-  "Gov Agency",
-  "Builder Co.",
+  "HCL",
+  "Nestle",
+  "Fidelity",
+  "MetLife",
+  "Mercer",
+  "Deloitte",
+  "R1 RCM",
+  "Huron Consulting",
 ];
 
 const whyItems = [
   {
-    title: "IS & IEC Certified Standards",
+    title: "20+ Years of Experience",
     description:
-      "Every execution follows documented standards for safety, quality, and compliance readiness.",
+      "Founded in 2003, NBES brings over two decades of reliable facility service delivery to corporate clients across Delhi-NCR.",
     icon: BadgeCheck,
   },
   {
-    title: "End-to-End Delivery",
+    title: "Corporate-Grade Execution",
     description:
-      "From assessment to commissioning, one accountable team manages your complete scope.",
+      "We understand corporate environments - minimal disruption, documented handovers, and consistent quality across all service categories.",
     icon: GitMerge,
   },
   {
-    title: "Zero-Incident Safety Culture",
+    title: "Full-Facility Coverage",
     description:
-      "Disciplined site protocols and supervised teams keep project environments safe and controlled.",
+      "From electrical and earthing to plumbing, civil, CCTV, and interior works - one trusted partner for your complete facility needs.",
     icon: ShieldCheck,
   },
 ] as const;
 
 const serviceAreas = [
-  "Nagpur",
-  "Pune",
-  "Mumbai",
-  "Hyderabad",
-  "Gujarat",
-  "Pan-India Mobilization",
+  "Gurgaon",
+  "Noida",
+  "Delhi",
+  "Faridabad",
+  "Greater Noida",
+  "NCR Region",
 ];
 
 export default function Home() {
@@ -93,16 +95,16 @@ export default function Home() {
           <ScrollRevealBlock>
             <SectionLabel>Why Choose Us</SectionLabel>
             <h2 className="mt-3 mb-5 font-display text-display-md font-extrabold uppercase text-black">
-              TRUSTED BUILDERS
+              TRUSTED PARTNER
               <br />
-              WITH YEARS OF
+              FOR CORPORATE
               <br />
-              EXPERIENCE
+              FACILITIES
             </h2>
             <p className="body-light max-w-[560px]">
-              NBES combines technical depth, certified field teams, and
-              disciplined project controls to deliver dependable outcomes for
-              industrial, commercial, and government clients across India.
+              NBES combines technical depth, disciplined service workflows, and
+              responsive on-ground teams to support day-to-day facility
+              operations for corporate offices across Delhi-NCR.
             </p>
             <Link
               href="/contact"
@@ -151,10 +153,10 @@ export default function Home() {
             </div>
             <div>
               <p className="max-w-[720px] font-body text-[17px] font-light leading-[1.75] text-white/70">
-                New Bharat Engineer Services executes projects across India,
-                with active presence in Maharashtra, Telangana, Gujarat, and
-                other industrial corridors. We mobilise teams pan-India for
-                project requirements.
+                New Bharat Engineering Services operates across Delhi-NCR, with
+                offices in Gurgaon (Haryana) and Noida (Uttar Pradesh). We
+                serve corporate clients across Delhi, Gurgaon, Noida,
+                Faridabad, Greater Noida, and the broader NCR region.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 {serviceAreas.map((area) => (

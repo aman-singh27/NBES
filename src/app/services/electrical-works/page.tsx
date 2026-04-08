@@ -8,29 +8,29 @@ import { ServiceSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title:
-    "Industrial Electrical Works - HT/LT Panel, Cable Laying & Transformer Installation India",
+    "Electrical Services Delhi-NCR - Corporate Office Electrical Maintenance",
   description:
-    "NBES handles complete industrial and commercial electrical installation: HT/LT panels, cable laying, transformer works, switchgear, load testing and power factor correction across India.",
+    "NBES provides electrical installation, maintenance, and troubleshooting for corporate offices across Delhi-NCR. Serving Gurgaon, Noida, Delhi, and the broader NCR region since 2003.",
   alternates: {
     canonical: "https://nbes.vercel.app/services/electrical-works",
   },
 };
 
 const services = [
-  "HT/LT panel installation and commissioning",
-  "Cable laying, termination, and dressing",
-  "Transformer installation and testing",
-  "Switchgear and protection systems",
-  "Load testing, earthing checks, and documentation",
-  "Power factor correction and troubleshooting",
+  "Electrical system installation and upgrades",
+  "Preventive maintenance for office infrastructure",
+  "Troubleshooting and corrective electrical repairs",
+  "Panel servicing and distribution board checks",
+  "Lighting and power circuit maintenance",
+  "Safety testing, compliance checks, and documentation",
 ];
 
 export default function ElectricalWorksPage() {
   return (
     <>
       <ServiceSchema
-        name="Industrial Electrical Works"
-        description="HT/LT panel installation, cable laying, transformer works, switchgear, load testing and power factor correction across India."
+        name="Electrical Services Delhi-NCR"
+        description="Electrical installation, preventive maintenance, and troubleshooting for corporate offices and commercial facilities across Delhi-NCR."
         url="https://nbes.vercel.app/services/electrical-works"
       />
 
@@ -40,16 +40,16 @@ export default function ElectricalWorksPage() {
             <div>
               <SectionLabel>Electrical Works</SectionLabel>
               <h1 className="mt-4 font-display text-display-lg font-extrabold uppercase text-white">
-                Industrial Electrical Works
+                Electrical Services
                 <br />
-                HT/LT Installation India
+                Delhi-NCR Corporate Facilities
               </h1>
               <p className="mt-5 max-w-[640px] font-body text-[17px] font-light leading-[1.75] text-white/70">
-                New Bharat Engineer Services delivers industrial and commercial
-                electrical installation for factories, warehouses, campuses, and
-                public facilities. We execute HT/LT panel work, cable laying,
-                transformer installation, switchgear upgrades, and complete test
-                and handover documentation.
+                New Bharat Engineering Services delivers electrical services for
+                corporate offices, commercial buildings, and facility teams
+                across Delhi-NCR. We handle installation, preventive
+                maintenance, breakdown response, upgrades, and compliance
+                documentation with minimal operational disruption.
               </p>
               <Link
                 href="/contact"
@@ -61,7 +61,7 @@ export default function ElectricalWorksPage() {
 
             <ImagePlaceholder
               gradient="linear-gradient(135deg, #0a1628 0%, #1a2f4a 100%)"
-              label="Industrial electrical panel installation - NBES"
+              label="Corporate electrical maintenance and installation - NBES"
               className="aspect-[4/5] w-full rounded-[8px] border border-white/10"
             />
           </div>

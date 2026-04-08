@@ -11,9 +11,9 @@ import ProjectGrid, {
 import { projects as projectData } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Completed Projects - Industrial & Commercial Electrical Works",
+  title: "Completed Projects - Corporate Facility Services Delhi-NCR",
   description:
-    "View NBES project portfolio: steel plant earthing, HT panel installation, corporate security systems, and municipal substation upgrades across India.",
+    "View NBES project portfolio across Delhi-NCR: corporate electrical maintenance, CCTV installations, earthing compliance work, and office interior fit-outs.",
   alternates: {
     canonical: "https://nbes.vercel.app/projects",
   },
@@ -30,6 +30,8 @@ const projects: ProjectItem[] = projectData.map((project, index) => ({
       ? "linear-gradient(135deg, #0d1f3c, #1a2f4a)"
       : project.category === "Security"
         ? "linear-gradient(135deg, #1a2a1a, #0d1a0d)"
+        : project.category === "Interior"
+          ? "linear-gradient(135deg, #2c1f12, #4a3420)"
         : "linear-gradient(135deg, #1a1a2e, #2a2a3e)",
 }));
 
@@ -47,9 +49,9 @@ export default function ProjectsPage() {
                 PROJECTS
               </h1>
               <p className="body-light mt-5 max-w-[440px] text-white/65">
-                Every project reflects our commitment to safety, precision, and
-                standards compliance - from industrial earthing to integrated
-                security.
+                Facility service delivery across corporate offices, campuses,
+                and commercial properties in Delhi-NCR - from electrical
+                maintenance to CCTV installation and office fit-outs.
               </p>
               <Link
                 href="/contact"

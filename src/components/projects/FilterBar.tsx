@@ -5,7 +5,7 @@ const categories = [
   "Electrical",
   "Earthing",
   "Security",
-  "Manpower",
+  "Interior",
 ] as const;
 
 export type FilterCategory = (typeof categories)[number];

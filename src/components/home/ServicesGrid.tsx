@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Anchor, ArrowRight, Shield, Users, Zap } from "lucide-react";
+import { Anchor, ArrowRight, Shield, Users, Wrench, Zap } from "lucide-react";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 
@@ -10,12 +10,12 @@ const services = [
     num: "01",
     icon: Zap,
     title: "Electrical Works",
-    desc: "High-voltage and low-voltage installation services built for industrial and commercial reliability.",
+    desc: "Comprehensive electrical installation, maintenance, and troubleshooting for corporate offices and commercial facilities across Delhi-NCR.",
     features: [
-      "HT/LT Panels",
-      "Cable Laying",
-      "Transformer Works",
-      "Load Testing",
+      "Office Electrical Upgrades",
+      "Preventive Maintenance",
+      "Fault Rectification",
+      "Safety Documentation",
     ],
     href: "/services/electrical-works",
   },
@@ -23,12 +23,12 @@ const services = [
     num: "02",
     icon: Anchor,
     title: "Earthing Solutions",
-    desc: "IS 3043-compliant earthing systems with scientific testing and complete report documentation.",
+    desc: "Electrical earthing systems ensuring safety and regulatory compliance for corporate facilities, data centers, and office buildings.",
     features: [
       "Soil Testing",
       "Chemical Earthing",
       "Lightning Protection",
-      "Continuity Reports",
+      "Compliance Reports",
     ],
     href: "/services/earthing-solutions",
   },
@@ -36,22 +36,40 @@ const services = [
     num: "03",
     icon: Shield,
     title: "Security Systems",
-    desc: "Integrated surveillance and access-control infrastructure for factory, office, and campus security.",
-    features: ["CCTV Systems", "Access Control", "Fire Alarms", "AMC Support"],
+    desc: "CCTV surveillance and access control systems designed and installed for corporate offices, campuses, and commercial properties.",
+    features: [
+      "CCTV Systems",
+      "Access Control",
+      "Fire Alarm Integration",
+      "Support Services",
+    ],
     href: "/services/security-systems",
   },
   {
     num: "04",
     icon: Users,
-    title: "Technical Manpower",
-    desc: "Certified electricians, supervisors, and project support teams available for short and long contracts.",
+    title: "Facility Workforce",
+    desc: "On-call skilled technicians for electrical, plumbing, civil, and carpentry requirements across Delhi-NCR facilities.",
     features: [
-      "ITI Certified Teams",
-      "Insured Workforce",
-      "Rapid Mobilization",
-      "Contract Compliant",
+      "Electrical Teams",
+      "Plumbing Technicians",
+      "Civil & Carpentry",
+      "Rapid Deployment",
     ],
     href: "/services/technical-manpower",
+  },
+  {
+    num: "05+",
+    icon: Wrench,
+    title: "More Services",
+    desc: "Explore plumbing solutions, civil and carpentry works, and interior workspace enhancement for corporate offices.",
+    features: [
+      "Plumbing Solutions",
+      "Civil & Carpentry Works",
+      "Interior Works",
+      "Full Service Portfolio",
+    ],
+    href: "/services",
   },
 ] as const;
 
@@ -70,8 +88,9 @@ export default function ServicesGrid() {
               </h2>
             </div>
             <p className="body-light text-[17px]">
-              From high-voltage installations to intelligent security
-              infrastructure - all compliant with IS, IEC, and BIS standards.
+              Integrated corporate facility services across Delhi-NCR, from
+              electrical maintenance and earthing to CCTV, workforce support,
+              plumbing, and interior works.
             </p>
           </div>
         </ScrollRevealBlock>

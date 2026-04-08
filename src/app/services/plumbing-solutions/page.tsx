@@ -7,59 +7,59 @@ import SectionLabel from "@/components/SectionLabel";
 import { ServiceSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Skilled Facility Workforce - On-Call Technicians Delhi-NCR",
+  title: "Plumbing Solutions - Corporate Office Plumbing Services Delhi-NCR",
   description:
-    "NBES provides skilled technicians for electrical, plumbing, civil, and carpentry work on demand for corporate facilities across Delhi-NCR.",
+    "NBES provides preventive and corrective plumbing maintenance for corporate offices in Delhi-NCR. Reliable plumbing solutions for facility managers in Gurgaon and Noida.",
   alternates: {
-    canonical: "https://nbes.vercel.app/services/technical-manpower",
+    canonical: "https://nbes.vercel.app/services/plumbing-solutions",
   },
 };
 
-const manpowerItems = [
-  "Certified electricians and electrical supervisors",
-  "Plumbing technicians",
-  "Civil and carpentry workers",
-  "CCTV and security systems technicians",
-  "Short-term and long-term deployment",
-  "Rapid mobilization across Delhi-NCR",
+const plumbingItems = [
+  "Water supply system maintenance",
+  "Drainage system upkeep and repairs",
+  "Leak detection and corrective plumbing",
+  "Fixture installation and replacement",
+  "Preventive plumbing maintenance schedules",
+  "Emergency plumbing response support",
 ];
 
-export default function TechnicalManpowerPage() {
+export default function PlumbingSolutionsPage() {
   return (
     <>
       <ServiceSchema
-        name="Skilled Facility Workforce"
-        description="On-call technicians for electrical, plumbing, civil, carpentry, and security support across corporate facilities in Delhi-NCR."
-        url="https://nbes.vercel.app/services/technical-manpower"
+        name="Plumbing Solutions"
+        description="Preventive and corrective plumbing maintenance for corporate offices and commercial facilities across Delhi-NCR."
+        url="https://nbes.vercel.app/services/plumbing-solutions"
       />
 
       <ScrollRevealBlock>
         <section className="bg-black py-24 text-white">
           <div className="container-width grid gap-12 lg:grid-cols-[58fr_42fr] lg:items-center">
             <div>
-              <SectionLabel>Technical Manpower</SectionLabel>
+              <SectionLabel>Plumbing Solutions</SectionLabel>
               <h1 className="mt-4 font-display text-display-lg font-extrabold uppercase text-white">
-                Skilled Facility
+                Corporate Plumbing Services
                 <br />
-                Workforce On Demand
+                Delhi-NCR Facilities
               </h1>
               <p className="mt-5 max-w-[640px] font-body text-[17px] font-light leading-[1.75] text-white/70">
-                New Bharat Engineering Services deploys skilled facility teams
-                for corporate offices and commercial properties across
-                Delhi-NCR. We provide on-call and planned workforce support for
-                electrical, plumbing, civil, carpentry, and security operations.
+                NBES supports facility and admin teams with preventive and
+                corrective plumbing services for offices and commercial
+                properties. We handle routine upkeep, urgent breakdowns,
+                fixture work, and system reliability improvements.
               </p>
               <Link
                 href="/contact"
                 className="mt-8 inline-flex items-center rounded-btn bg-accent px-6 py-[14px] font-display text-[14px] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-accent-dark"
               >
-                Request Manpower Quote
+                Request Plumbing Quote
               </Link>
             </div>
 
             <ImagePlaceholder
-              gradient="linear-gradient(135deg, #1a1a0d 0%, #2a2a1a 100%)"
-              label="Skilled facility workforce deployed on site - NBES"
+              gradient="linear-gradient(135deg, #0a1a28 0%, #1a3040 100%)"
+              label="Plumbing solutions for corporate facilities - NBES"
               className="aspect-[4/5] w-full rounded-[8px] border border-white/10"
             />
           </div>
@@ -69,7 +69,7 @@ export default function TechnicalManpowerPage() {
       <ScrollRevealBlock>
         <section className="bg-white section-padding">
           <div className="container-width grid gap-8 lg:grid-cols-3">
-            {manpowerItems.map((item) => (
+            {plumbingItems.map((item) => (
               <article
                 key={item}
                 className="rounded-[6px] border border-border bg-off-white p-6"

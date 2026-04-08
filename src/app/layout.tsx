@@ -20,52 +20,53 @@ const bodyFont = DM_Sans({
 export const metadata: Metadata = {
   title: {
     default:
-      "New Bharat Engineer Services | Industrial Electrical, Earthing & Security Solutions India",
-    template: "%s | NBES — New Bharat Engineer Services",
+      "New Bharat Engineering Services | Electrical & Facility Management Delhi-NCR",
+    template: "%s | NBES — New Bharat Engineering Services",
   },
   metadataBase: new URL("https://nbes.vercel.app"),
   alternates: {
     canonical: "https://nbes.vercel.app",
   },
   description:
-    "NBES delivers certified electrical works, IS 3043 earthing systems, CCTV & access control security, and ITI-certified technical manpower for industrial, commercial, and government projects across India.",
+    "NBES (New Bharat Engineering Services) delivers electrical, plumbing, civil, CCTV, earthing, carpentry, and interior facility services for corporate offices across Delhi-NCR. Trusted by HCL, Nestle, Deloitte, and more since 2003.",
   keywords: [
-    "electrical contractor India",
-    "industrial earthing solutions",
-    "IS 3043 chemical earthing",
-    "HT LT panel installation",
-    "technical manpower India",
-    "CCTV security installation",
-    "electrical works Maharashtra",
-    "New Bharat Engineer Services",
+    "electrical services Delhi NCR",
+    "facility management Gurgaon",
+    "corporate electrical contractor Delhi",
+    "CCTV installation Gurgaon",
+    "earthing services Delhi",
+    "plumbing services Noida",
+    "facility services Gurgaon",
+    "New Bharat Engineering Services",
     "NBES",
+    "electrical contractor Gurgaon",
   ],
-  authors: [{ name: "New Bharat Engineer Services" }],
+  authors: [{ name: "New Bharat Engineering Services" }],
   creator: "NBES",
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://nbes.vercel.app",
-    siteName: "New Bharat Engineer Services",
+    siteName: "New Bharat Engineering Services",
     title:
-      "New Bharat Engineer Services | Electrical, Earthing & Security Solutions India",
+      "New Bharat Engineering Services | Facility & Electrical Services Delhi-NCR",
     description:
-      "Certified electrical works, IS 3043 earthing, integrated security systems, and technical manpower for industrial and commercial projects across India.",
+      "NBES delivers electrical and facility services for corporate offices across Delhi-NCR, including plumbing, civil works, CCTV, earthing, carpentry, and interiors.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "NBES — New Bharat Engineer Services",
+        alt: "NBES — New Bharat Engineering Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "New Bharat Engineer Services | Electrical & Earthing Solutions India",
+      "New Bharat Engineering Services | Electrical & Facility Services Delhi-NCR",
     description:
-      "Industrial electrical works, IS 3043 earthing, CCTV security, and certified manpower across India.",
+      "Electrical, plumbing, civil, CCTV, earthing, carpentry, and interior facility services for Delhi-NCR corporate offices.",
     images: ["/og-image.jpg"],
   },
   robots: {

@@ -3,7 +3,7 @@ import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Terms of Use - New Bharat Engineer Services",
+  title: "Terms of Use - New Bharat Engineering Services",
   description: "Basic terms of use for the NBES website and inquiry forms.",
   alternates: {
     canonical: "https://nbes.vercel.app/terms",

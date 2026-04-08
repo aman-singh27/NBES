@@ -98,10 +98,10 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-5 md:flex">
           <a
-            href="tel:+910000000000"
+            href="tel:+919999060083"
             className="font-body text-sm font-medium text-charcoal"
           >
-            +91 00000 00000
+            +91 99990 60083
           </a>
           <Link
             href="/contact"
@@ -173,13 +173,13 @@ export default function Navbar() {
 
               <div className="border-t border-white/10 pt-6">
                 <a
-                  href="tel:+910000000000"
+                  href="tel:+919999060083"
                   className="block font-body text-sm font-medium text-white/70"
                 >
-                  +91 00000 00000
+                  +91 99990 60083
                 </a>
                 <a
-                  href="https://wa.me/910000000000"
+                  href="https://wa.me/919999060083"
                   className="mt-2 inline-flex font-display text-[14px] font-bold uppercase tracking-[0.06em] text-white"
                 >
                   WhatsApp Us

@@ -11,19 +11,21 @@ import ServiceDetail, {
 import { faqItems } from "@/data/faqs";
 
 export const metadata: Metadata = {
-  title: "Electrical, Earthing, Security & Manpower Services",
+  title:
+    "Services - Electrical, Plumbing, CCTV, Earthing & Facility Services Delhi-NCR",
   description:
-    "NBES offers industrial electrical installation, IS 3043-compliant earthing, integrated CCTV & access control, and ITI-certified technical manpower. Serving Maharashtra, Telangana, Gujarat and pan-India.",
+    "NBES offers electrical services, plumbing, carpentry, civil works, CCTV installation, earthing, and interior works for corporate offices in Delhi-NCR. One trusted partner for all facility needs.",
   alternates: {
     canonical: "https://nbes.vercel.app/services",
   },
   keywords: [
-    "electrical contractor India",
-    "earthing solutions",
-    "security system installation",
-    "technical manpower",
-    "IS 3043 earthing",
-    "electrical contractor Maharashtra",
+    "electrical services Gurgaon",
+    "facility services Delhi NCR",
+    "CCTV installation Noida",
+    "earthing services Delhi",
+    "plumbing services Gurgaon",
+    "civil works NCR",
+    "corporate facility management Delhi",
   ],
 };
 
@@ -31,23 +33,23 @@ const services: ServiceDetailProps[] = [
   {
     num: "01",
     id: "electrical",
-    title: "INDUSTRIAL & COMMERCIAL\nELECTRICAL INSTALLATION",
+    title: "CORPORATE ELECTRICAL\nSERVICES & MAINTENANCE",
     subtitle: "Electrical Works",
     description:
-      "HT/LT panels, cable laying, transformers, switchgear, power factor correction.",
+      "Installation, maintenance, and troubleshooting for corporate office electrical systems across Delhi-NCR.",
     included: [
-      "HT/LT Panel Installation & Commissioning",
-      "Cable Laying & Termination",
-      "Transformer Installation",
-      "Switchgear & Protection Systems",
-      "Load Testing & Documentation",
-      "Power Factor Correction",
+      "Electrical Installation & Upgrades",
+      "Preventive Electrical Maintenance",
+      "Fault Detection & Rectification",
+      "Panel Servicing & Distribution Checks",
+      "Lighting & Power Circuit Works",
+      "Safety Testing & Documentation",
     ],
     industries: [
-      "Factories",
-      "Warehouses",
+      "Corporate Offices",
       "Commercial Buildings",
-      "Government Facilities",
+      "IT Parks",
+      "Institutions",
     ],
     layout: "image-left",
     background: "white",
@@ -58,23 +60,23 @@ const services: ServiceDetailProps[] = [
   {
     num: "02",
     id: "earthing",
-    title: "PRECISION EARTHING —\nIS 3043 COMPLIANT",
+    title: "EARTHING SERVICES FOR\nCORPORATE FACILITIES",
     subtitle: "Earthing Solutions",
     description:
-      "IS 3043 compliant conventional and chemical earthing, lightning protection.",
+      "Electrical earthing systems to improve safety, compliance, and reliability in office facilities.",
     included: [
       "Soil Resistivity Testing",
-      "Conventional Plate/Pipe Earthing",
+      "Conventional Earthing Systems",
       "Chemical Earthing Systems",
-      "Lightning Arrestor & Down Conductor",
-      "Earth Continuity Testing & Reports",
-      "Maintenance & Re-testing",
+      "Lightning Protection Integration",
+      "Earth Continuity Testing",
+      "Periodic Maintenance & Re-Testing",
     ],
     industries: [
-      "Industrial Plants",
+      "Corporate Offices",
       "Data Centers",
-      "Telecom Towers",
-      "Government Buildings",
+      "Commercial Complexes",
+      "IT Campuses",
     ],
     layout: "image-right",
     background: "off-white",
@@ -85,23 +87,23 @@ const services: ServiceDetailProps[] = [
   {
     num: "03",
     id: "security",
-    title: "INTEGRATED SECURITY\nINFRASTRUCTURE",
+    title: "CCTV & ACCESS CONTROL\nFOR OFFICE CAMPUSES",
     subtitle: "Security Systems",
     description:
-      "CCTV, access control, biometric, fire detection, perimeter security.",
+      "Integrated surveillance, access control, and fire alarm systems for office safety and visibility.",
     included: [
-      "CCTV Surveillance System Design & Install",
-      "Access Control & Biometrics",
-      "Fire Detection & Alarm Systems",
-      "Perimeter Security & Intrusion Detection",
-      "Video Management Software",
-      "Annual Maintenance Contract (AMC)",
+      "CCTV System Design & Installation",
+      "Biometric/Card Access Control",
+      "Fire Alarm & Detection Integration",
+      "Video Monitoring Configuration",
+      "Coverage Optimization for Office Floors",
+      "Maintenance & Support",
     ],
     industries: [
-      "Factories",
       "Corporate Offices",
-      "Warehouses",
-      "Residential Complexes",
+      "Commercial Buildings",
+      "Campuses",
+      "Retail Properties",
     ],
     layout: "image-left",
     background: "white",
@@ -112,55 +114,127 @@ const services: ServiceDetailProps[] = [
   {
     num: "04",
     id: "manpower",
-    title: "CERTIFIED ELECTRICAL\nWORKFORCE ON DEMAND",
+    title: "SKILLED FACILITY\nWORKFORCE ON DEMAND",
     subtitle: "Technical Manpower",
-    description: "Certified ITI/diploma electricians and supervisors on-site.",
+    description:
+      "On-call workforce support for electrical, plumbing, civil, carpentry, and facility operations.",
     included: [
-      "ITI/Diploma Certified Electricians",
-      "Site Supervisors & Engineers",
+      "Certified Electricians & Supervisors",
+      "Plumbing Technicians",
+      "Civil & Carpentry Workers",
+      "CCTV & Security Technicians",
       "Short & Long-Term Contracts",
-      "Workman's Compensation Insured",
-      "Contract Labour Act Compliant",
-      "Rapid Mobilization (5-7 working days)",
+      "Rapid Mobilization Across Delhi-NCR",
     ],
     industries: [
-      "EPC Contractors",
+      "Corporate Offices",
+      "Facility Management Teams",
       "Plant Operators",
-      "Facility Managers",
-      "Project Developers",
+      "Commercial Properties",
     ],
     layout: "image-right",
     background: "off-white",
     imageGradient: "linear-gradient(135deg, #1a1a0d 0%, #2a2a1a 100%)",
-    imageLabel: "Technical team on site",
+    imageLabel: "Skilled facility workforce on site",
     href: "/services/technical-manpower",
+  },
+  {
+    num: "05",
+    id: "plumbing",
+    title: "PLUMBING SOLUTIONS\nFOR CORPORATE FACILITIES",
+    subtitle: "Plumbing Services",
+    description:
+      "Preventive and corrective plumbing for corporate offices and facilities.",
+    included: [
+      "Water Supply System Maintenance",
+      "Drainage & Waste Systems",
+      "Leak Detection & Repair",
+      "Fixture Installation & Replacement",
+      "Preventive Maintenance Schedules",
+      "Emergency Response",
+    ],
+    industries: [
+      "Corporate Offices",
+      "Commercial Buildings",
+      "Retail Spaces",
+      "Institutions",
+    ],
+    layout: "image-left",
+    background: "white",
+    imageGradient: "linear-gradient(135deg, #0a1a28 0%, #1a3040 100%)",
+    imageLabel: "Plumbing maintenance - NBES",
+    href: "/services/plumbing-solutions",
+  },
+  {
+    num: "06",
+    id: "civil",
+    title: "CIVIL & CARPENTRY\nWORKS",
+    subtitle: "Civil & Carpentry",
+    description:
+      "Minor construction, repairs, fit-outs, and custom carpentry for office environments.",
+    included: [
+      "Minor Civil Repairs",
+      "Partition & False Ceiling Works",
+      "Flooring Installation & Repair",
+      "Custom Carpentry Solutions",
+      "Interior Fit-Outs",
+      "Structural Touch-Ups",
+    ],
+    industries: ["Corporate Offices", "Warehouses", "Retail", "Hospitals"],
+    layout: "image-right",
+    background: "off-white",
+    imageGradient: "linear-gradient(135deg, #1a1410 0%, #2a2015 100%)",
+    imageLabel: "Civil and carpentry works - NBES",
+    href: "/services/civil-carpentry-works",
+  },
+  {
+    num: "07",
+    id: "interior",
+    title: "INTERIOR WORKS &\nWORKSPACE ENHANCEMENT",
+    subtitle: "Interior Works",
+    description:
+      "Functional and aesthetic workspace improvements tailored to client specifications.",
+    included: [
+      "False Ceiling & Acoustics",
+      "Flooring & Finishes",
+      "Painting & Surface Works",
+      "Modular Workstation Installation",
+      "Space Planning & Layout",
+      "Finishing & Detailing",
+    ],
+    industries: ["Corporate Offices", "Banks", "IT Parks", "Commercial Spaces"],
+    layout: "image-left",
+    background: "white",
+    imageGradient: "linear-gradient(135deg, #1a1020 0%, #2a1830 100%)",
+    imageLabel: "Interior works and workspace enhancement - NBES",
+    href: "/services/interior-works",
   },
 ];
 
 const industries = [
   {
     icon: Building2,
-    title: "Industrial/Manufacturing",
+    title: "Corporate Offices",
     description:
-      "Plant-scale systems and process-critical electrical infrastructure.",
+      "End-to-end facility services for active office operations and workplaces.",
   },
   {
     icon: Briefcase,
-    title: "Commercial",
+    title: "Commercial Buildings",
     description:
-      "Safe and scalable installations for offices and commercial facilities.",
+      "Reliable maintenance and service execution for multi-tenant properties.",
   },
   {
     icon: Landmark,
-    title: "Government/PSU",
+    title: "IT Parks & Campuses",
     description:
-      "Compliance-led execution for public and institutional projects.",
+      "Scalable electrical, security, and infrastructure support for tech campuses.",
   },
   {
     icon: HardHat,
-    title: "Infrastructure/EPC",
+    title: "Institutional Facilities",
     description:
-      "Reliable support for EPC timelines, quality, and safety goals.",
+      "Facility upkeep and project execution with compliance and minimal disruption.",
   },
 ] as const;
 
@@ -183,9 +257,9 @@ export default function ServicesPage() {
               OUR SERVICES
             </h1>
             <p className="body-light text-white/65 max-w-[580px] mx-auto mt-5 text-[17px]">
-              Complete electrical, earthing, security, and manpower solutions -
-              engineered for industrial, commercial, and government projects
-              across India.
+              Corporate facility services for Delhi-NCR offices, campuses, and
+              commercial properties. From electrical and plumbing to CCTV,
+              earthing, civil-carpentry, and interiors.
             </p>
           </div>
         </section>

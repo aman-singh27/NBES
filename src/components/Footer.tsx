@@ -3,16 +3,18 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const companyLinks = ["About", "Projects", "Services", "Contact"];
 const serviceLinks = [
-  "Electrical Works",
-  "Earthing",
-  "Security Systems",
-  "Technical Manpower",
+  "Electrical Services",
+  "Plumbing Solutions",
+  "CCTV Installation",
+  "Earthing Services",
+  "Civil & Carpentry",
+  "Interior Works",
 ];
 const industryLinks = [
-  "Industrial",
-  "Commercial",
-  "Government",
-  "Infrastructure",
+  "Corporate Offices",
+  "Commercial Buildings",
+  "IT Parks",
+  "Financial Services",
 ];
 
 export default function Footer() {
@@ -34,29 +36,34 @@ export default function Footer() {
             </Link>
 
             <p className="mt-5 max-w-[420px] font-body text-[14px] font-light leading-[1.75] text-white/45">
-              Certified electrical, earthing, security, and technical manpower
-              solutions for industrial, commercial, and government projects
-              across India.
+              New Bharat Engineering Services delivers electrical, plumbing,
+              civil, CCTV, earthing, carpentry, and interior facility
+              solutions for corporate and commercial offices across Delhi-NCR.
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
               <a
-                href="tel:+910000000000"
+                href="tel:+919999060083"
                 className="inline-flex items-center gap-2 font-body text-sm text-white/45 transition-colors hover:text-white"
               >
                 <Phone size={15} />
-                +91 00000 00000
+                +91 99990 60083
               </a>
               <a
-                href="mailto:info@nbes.in"
+                href="mailto:contact@nbesindia.com"
                 className="inline-flex items-center gap-2 font-body text-sm text-white/45 transition-colors hover:text-white"
               >
                 <Mail size={15} />
-                info@nbes.in
+                contact@nbesindia.com
               </a>
-              <p className="inline-flex items-center gap-2 font-body text-sm text-white/45 transition-colors hover:text-white">
+              <p className="inline-flex items-start gap-2 font-body text-sm text-white/45 transition-colors hover:text-white">
                 <MapPin size={15} />
-                India
+                <span>
+                  366, Saraswati Vihar, Mehrauli Road, Gurgaon - 122001
+                  <br />
+                  Shop No. 1, Khasra No. 38, Bhartha Complex, Part-II,
+                  Nithari, Sector-31, Noida - 201301
+                </span>
               </p>
             </div>
           </div>
@@ -94,7 +101,19 @@ export default function Footer() {
               {serviceLinks.map((item) => (
                 <Link
                   key={item}
-                  href="/services"
+                  href={
+                    item === "Electrical Services"
+                      ? "/services/electrical-works"
+                      : item === "Plumbing Solutions"
+                        ? "/services/plumbing-solutions"
+                        : item === "CCTV Installation"
+                          ? "/services/security-systems"
+                          : item === "Earthing Services"
+                            ? "/services/earthing-solutions"
+                            : item === "Civil & Carpentry"
+                              ? "/services/civil-carpentry-works"
+                              : "/services/interior-works"
+                  }
                   className="font-body text-sm text-white/45 transition-all hover:pl-1 hover:text-white"
                 >
                   {item}

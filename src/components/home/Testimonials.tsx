@@ -6,24 +6,24 @@ import SectionLabel from "@/components/SectionLabel";
 const testimonials = [
   {
     quote:
-      "NBES delivered our earthing and panel work with exceptional documentation quality. Their team was technically strong and highly disciplined on-site.",
-    name: "S. Patil",
-    role: "Plant Head, Steel Manufacturing Unit",
-    initials: "SP",
+      "NBES has been our go-to electrical and facility partner for years. Their response time and quality of work stands out - we never have to follow up twice.",
+    name: "Facility Manager",
+    role: "IT Services Company, Gurgaon",
+    initials: "FM",
   },
   {
     quote:
-      "From survey to commissioning, NBES handled our security and electrical integration smoothly. Timelines were met without compromising safety.",
-    name: "R. Menon",
-    role: "Facilities Manager, Corporate Campus",
-    initials: "RM",
+      "The team handles everything from electrical faults to plumbing issues with equal professionalism. Managing our office facility has become much simpler since we engaged NBES.",
+    name: "Operations Head",
+    role: "Financial Services Firm, Noida",
+    initials: "OH",
   },
   {
     quote:
-      "Their manpower support and supervision gave us real execution confidence during peak project windows. Professional and responsive throughout.",
-    name: "A. Desai",
-    role: "Project Director, EPC Contractor",
-    initials: "AD",
+      "What sets NBES apart is their reliability. They show up on time, complete the work correctly, and document it well. That's exactly what a corporate facility needs.",
+    name: "Admin & Facility Lead",
+    role: "Consulting Group, Delhi-NCR",
+    initials: "AL",
   },
 ] as const;
 

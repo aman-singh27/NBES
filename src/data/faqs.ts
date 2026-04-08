@@ -5,33 +5,33 @@ export type FAQItem = {
 
 export const faqItems: FAQItem[] = [
   {
-    question: "What types of projects does NBES handle?",
+    question: "What types of services does NBES provide?",
     answer:
-      "NBES handles industrial and commercial electrical installations, IS 3043 earthing systems, integrated security installations, and technical manpower deployment.",
+      "NBES provides electrical services, plumbing, carpentry, civil works, CCTV installation, earthing, and interior works - all focused on corporate office and facility requirements.",
   },
   {
-    question: "Which states does NBES operate in?",
+    question: "Which areas does NBES operate in?",
     answer:
-      "NBES executes projects across India, with active work documented in Maharashtra, Telangana, and Gujarat among other regions.",
+      "NBES operates across Delhi-NCR, with offices in Gurgaon and Noida. We serve corporate clients in Delhi, Gurgaon, Noida, Faridabad, and the broader NCR region.",
   },
   {
-    question: "Can NBES take a turnkey electrical project?",
+    question: "How long has NBES been in operation?",
     answer:
-      "Yes. NBES supports complete delivery including HT/LT panel installation, cable laying and termination, transformer and switchgear installation, testing, and commissioning.",
+      "NBES was established in 2003 and has over 20 years of experience delivering electrical and facility services to corporate clients.",
   },
   {
-    question: "Are NBES technicians certified and insured?",
+    question: "Who are NBES's clients?",
     answer:
-      "Yes. NBES deploys ITI and diploma-certified electricians, supervisors, and engineers with insured manpower and compliance-focused site deployment.",
+      "NBES has partnered with leading organizations including HCL, Nestle, Fidelity, MetLife, Mercer, Deloitte, R1 RCM, and Huron Consulting Group.",
   },
   {
-    question: "How quickly can you mobilize?",
+    question: "Does NBES handle both new installations and maintenance?",
     answer:
-      "NBES can rapidly mobilize technical teams for short-term and long-term engagements, typically within 5 to 7 working days depending on project scope.",
+      "Yes. NBES handles new installations, preventive maintenance, corrective maintenance, and troubleshooting across all service categories including electrical, plumbing, CCTV, and earthing.",
   },
   {
-    question: "Do you offer AMC and maintenance contracts?",
+    question: "Can NBES customize services for our facility requirements?",
     answer:
-      "Yes. NBES provides annual maintenance contracts and periodic re-testing support for electrical, earthing, and security systems.",
+      "Yes. NBES tailors service delivery to each client's operational requirements, ensuring minimal disruption and alignment with facility management goals.",
   },
 ];

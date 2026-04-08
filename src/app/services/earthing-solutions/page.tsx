@@ -7,9 +7,10 @@ import SectionLabel from "@/components/SectionLabel";
 import { FAQSchema, ServiceSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "IS 3043 Earthing Solutions - Chemical & Conventional Earthing India",
+  title:
+    "Earthing Services Delhi-NCR - Electrical Safety Compliance for Corporate Offices",
   description:
-    "NBES provides IS 3043-compliant chemical earthing, conventional plate/pipe earthing, and lightning protection for industrial plants, data centers, and telecom towers across India. Full soil testing and documentation.",
+    "NBES installs and tests earthing systems for corporate offices and commercial facilities in Delhi-NCR, ensuring electrical safety compliance. Offices in Gurgaon and Noida.",
   alternates: {
     canonical: "https://nbes.vercel.app/services/earthing-solutions",
   },
@@ -19,18 +20,18 @@ const earthingFaqs = [
   {
     question: "What is IS 3043 earthing?",
     answer:
-      "IS 3043 is the Indian Standard that defines safe earthing system design, installation, and testing practices for electrical protection and fault current dissipation.",
+      "IS 3043 is the Indian Standard for earthing design, installation, and testing. For corporate offices, it helps maintain safe fault-current dissipation and electrical protection compliance.",
   },
   {
     question:
       "What is the difference between chemical and conventional earthing?",
     answer:
-      "Chemical earthing uses conductive compounds to stabilise soil resistance, while conventional earthing uses plate or pipe electrodes. The right choice depends on soil conditions and the facility load.",
+      "Chemical earthing uses conductive compounds to maintain stable resistance, while conventional earthing typically uses plate or pipe electrodes. NBES recommends the right option based on office load and site conditions.",
   },
   {
     question: "How often should earthing systems be tested?",
     answer:
-      "Testing frequency depends on site conditions, but industrial facilities usually benefit from periodic inspection and resistance testing at least annually or after major electrical changes.",
+      "Corporate facilities should schedule periodic earthing inspection and resistance testing, typically at least once a year or after major electrical modifications, to maintain safety and compliance.",
   },
 ];
 
@@ -38,7 +39,7 @@ const sections = [
   {
     title: "Chemical Earthing",
     description:
-      "Low-maintenance earthing systems designed for stable resistance and reliable fault current dissipation in industrial environments.",
+      "Low-maintenance earthing systems designed for stable resistance and reliable fault current dissipation in corporate and commercial facilities.",
   },
   {
     title: "Conventional Earthing",
@@ -56,8 +57,8 @@ export default function EarthingSolutionsPage() {
   return (
     <>
       <ServiceSchema
-        name="IS 3043 Earthing Solutions"
-        description="Chemical earthing, conventional earthing, and lightning protection for industrial plants, data centers, and telecom towers across India."
+        name="Earthing Services Delhi-NCR"
+        description="Corporate earthing installation, testing, and safety compliance services for offices and commercial buildings in Delhi-NCR."
         url="https://nbes.vercel.app/services/earthing-solutions"
       />
       <FAQSchema faqs={earthingFaqs} />
@@ -68,16 +69,16 @@ export default function EarthingSolutionsPage() {
             <div>
               <SectionLabel>Earthing Solutions</SectionLabel>
               <h1 className="mt-4 font-display text-display-lg font-extrabold uppercase text-white">
-                IS 3043 Earthing Solutions
+                Earthing Services
                 <br />
-                Industrial & Commercial India
+                Delhi-NCR Corporate Facilities
               </h1>
               <p className="mt-5 max-w-[640px] font-body text-[17px] font-light leading-[1.75] text-white/70">
-                NBES designs and installs earthing systems for industrial
-                plants, data centers, telecom towers, warehouses, and government
-                facilities. We start with soil resistivity testing, then design
-                a compliant system, install it, and finish with testing and
-                documentation.
+                NBES designs and installs earthing systems for corporate
+                offices, commercial properties, and data-heavy workspaces in
+                Delhi-NCR. We begin with site and soil checks, deploy a
+                compliant system, and complete testing with clear
+                documentation for facility teams.
               </p>
               <Link
                 href="/contact"

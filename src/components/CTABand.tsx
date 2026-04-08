@@ -33,7 +33,7 @@ export default function CTABand({
             Get a Quote
           </Link>
           <Link
-            href="https://wa.me/910000000000"
+            href="https://wa.me/919999060083"
             className="inline-flex items-center justify-center gap-2 rounded-btn border border-white/50 px-7 py-[14px] font-display text-[14px] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:border-white hover:bg-white/10"
           >
             <MessageCircle size={16} />

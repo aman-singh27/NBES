@@ -237,7 +237,7 @@ export default function ContactForm() {
             onChange={(event) => handleChange("phone", event.target.value)}
             onBlur={() => handleBlur("phone")}
             className={`${fieldClassName} ${errors.phone ? "border-[#E24B4A]" : ""}`}
-            placeholder="+91 00000 00000"
+            placeholder="+91 99990 60083"
             disabled={isSubmitting}
             aria-invalid={Boolean(errors.phone)}
           />

@@ -6,7 +6,8 @@ import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Contact New Bharat Engineering Services - Delhi-NCR Facility Services",
+  title:
+    "Contact New Bharat Engineering Services - Delhi-NCR Facility Services",
   description:
     "Contact New Bharat Engineering Services for electrical and facility service requirements across Delhi-NCR. Reach our Gurgaon and Noida teams for fast support.",
   alternates: {

@@ -46,8 +46,8 @@ export default function PlumbingSolutionsPage() {
               <p className="mt-5 max-w-[640px] font-body text-[17px] font-light leading-[1.75] text-white/70">
                 NBES supports facility and admin teams with preventive and
                 corrective plumbing services for offices and commercial
-                properties. We handle routine upkeep, urgent breakdowns,
-                fixture work, and system reliability improvements.
+                properties. We handle routine upkeep, urgent breakdowns, fixture
+                work, and system reliability improvements.
               </p>
               <Link
                 href="/contact"

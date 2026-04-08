@@ -37,8 +37,8 @@ export default function Footer() {
 
             <p className="mt-5 max-w-[420px] font-body text-[14px] font-light leading-[1.75] text-white/45">
               New Bharat Engineering Services delivers electrical, plumbing,
-              civil, CCTV, earthing, carpentry, and interior facility
-              solutions for corporate and commercial offices across Delhi-NCR.
+              civil, CCTV, earthing, carpentry, and interior facility solutions
+              for corporate and commercial offices across Delhi-NCR.
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
@@ -61,8 +61,8 @@ export default function Footer() {
                 <span>
                   366, Saraswati Vihar, Mehrauli Road, Gurgaon - 122001
                   <br />
-                  Shop No. 1, Khasra No. 38, Bhartha Complex, Part-II,
-                  Nithari, Sector-31, Noida - 201301
+                  Shop No. 1, Khasra No. 38, Bhartha Complex, Part-II, Nithari,
+                  Sector-31, Noida - 201301
                 </span>
               </p>
             </div>

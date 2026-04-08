@@ -159,8 +159,8 @@ export default function AboutPage() {
                   From electrical installations and earthing to plumbing, CCTV,
                   carpentry, civil works, and interior fit-outs, we handle the
                   full range of facility requirements. Our clients include HCL,
-                  Nestle, Fidelity, MetLife, Mercer, Deloitte, R1 RCM, and
-                  Huron Consulting Group.
+                  Nestle, Fidelity, MetLife, Mercer, Deloitte, R1 RCM, and Huron
+                  Consulting Group.
                 </p>
                 <p>
                   What distinguishes NBES is our client-centric approach: we

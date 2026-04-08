@@ -87,9 +87,9 @@ export default function Hero() {
             className="mt-6 max-w-[460px] font-body text-[17px] font-light leading-[1.75] text-white/65"
           >
             NBES - New Bharat Engineering Services - has delivered reliable
-            electrical, plumbing, civil, CCTV, earthing, carpentry, and
-            interior services for corporate offices across Delhi-NCR since
-            2003. Trusted by HCL, Nestle, Deloitte, and leading organizations.
+            electrical, plumbing, civil, CCTV, earthing, carpentry, and interior
+            services for corporate offices across Delhi-NCR since 2003. Trusted
+            by HCL, Nestle, Deloitte, and leading organizations.
           </motion.p>
 
           <motion.p

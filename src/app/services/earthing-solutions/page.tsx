@@ -77,8 +77,8 @@ export default function EarthingSolutionsPage() {
                 NBES designs and installs earthing systems for corporate
                 offices, commercial properties, and data-heavy workspaces in
                 Delhi-NCR. We begin with site and soil checks, deploy a
-                compliant system, and complete testing with clear
-                documentation for facility teams.
+                compliant system, and complete testing with clear documentation
+                for facility teams.
               </p>
               <Link
                 href="/contact"

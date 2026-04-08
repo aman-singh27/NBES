@@ -154,9 +154,9 @@ export default function Home() {
             <div>
               <p className="max-w-[720px] font-body text-[17px] font-light leading-[1.75] text-white/70">
                 New Bharat Engineering Services operates across Delhi-NCR, with
-                offices in Gurgaon (Haryana) and Noida (Uttar Pradesh). We
-                serve corporate clients across Delhi, Gurgaon, Noida,
-                Faridabad, Greater Noida, and the broader NCR region.
+                offices in Gurgaon (Haryana) and Noida (Uttar Pradesh). We serve
+                corporate clients across Delhi, Gurgaon, Noida, Faridabad,
+                Greater Noida, and the broader NCR region.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 {serviceAreas.map((area) => (

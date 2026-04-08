@@ -7,8 +7,7 @@ import SectionLabel from "@/components/SectionLabel";
 import { ServiceSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title:
-    "CCTV Installation Delhi-NCR - Corporate Office Surveillance Systems",
+  title: "CCTV Installation Delhi-NCR - Corporate Office Surveillance Systems",
   description:
     "NBES designs and installs CCTV surveillance, access control, and fire alarm systems for corporate offices and commercial properties across Delhi-NCR.",
   alternates: {
@@ -41,7 +40,8 @@ export default function SecuritySystemsPage() {
               <SectionLabel>Security Systems</SectionLabel>
               <h1 className="mt-4 font-display text-display-lg font-extrabold uppercase text-white">
                 CCTV Installation & Access Control
-                <br />Delhi-NCR Corporate Offices
+                <br />
+                Delhi-NCR Corporate Offices
               </h1>
               <p className="mt-5 max-w-[640px] font-body text-[17px] font-light leading-[1.75] text-white/70">
                 We design and install integrated security systems for office

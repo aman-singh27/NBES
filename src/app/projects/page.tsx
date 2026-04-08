@@ -32,7 +32,7 @@ const projects: ProjectItem[] = projectData.map((project, index) => ({
         ? "linear-gradient(135deg, #1a2a1a, #0d1a0d)"
         : project.category === "Interior"
           ? "linear-gradient(135deg, #2c1f12, #4a3420)"
-        : "linear-gradient(135deg, #1a1a2e, #2a2a3e)",
+          : "linear-gradient(135deg, #1a1a2e, #2a2a3e)",
 }));
 
 export default function ProjectsPage() {

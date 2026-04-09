@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    localeAlternate: ["en_US"],
+    alternateLocale: ["en_US"],
     url: SITE_URL,
     siteName: "New Bharat Engineering Services",
     title:

@@ -120,8 +120,7 @@ export default function Home() {
           </div>
           <div className="container-width mt-4">
             <p className="font-body text-[13px] text-mid-grey">
-              Trusted by leading corporate and institutional clients since
-              2003.
+              Trusted by leading corporate and institutional clients since 2003.
             </p>
           </div>
         </section>
@@ -201,8 +200,8 @@ export default function Home() {
               </p>
               <div className="mt-4 space-y-2 rounded-[8px] border border-white/10 bg-white/5 p-4">
                 <p className="font-body text-[14px] text-white/80">
-                  Gurgaon Office: 366, Saraswati Vihar, Mehrauli Road, Gurgaon
-                  - 122001
+                  Gurgaon Office: 366, Saraswati Vihar, Mehrauli Road, Gurgaon -
+                  122001
                 </p>
                 <p className="font-body text-[14px] text-white/80">
                   Noida Office: Shop No. 1, Khasra No. 38, Bhartha Complex,

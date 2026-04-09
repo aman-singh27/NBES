@@ -32,7 +32,10 @@ export default function InteriorWorksPage() {
         items={[
           { name: "Home", url: SITE_URL },
           { name: "Services", url: `${SITE_URL}/services` },
-          { name: "Interior Works", url: `${SITE_URL}/services/interior-works` },
+          {
+            name: "Interior Works",
+            url: `${SITE_URL}/services/interior-works`,
+          },
         ]}
       />
       <ServiceSchema

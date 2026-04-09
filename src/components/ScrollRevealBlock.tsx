@@ -34,10 +34,7 @@ export default function ScrollRevealBlock({
       }`;
 
   return (
-    <div
-      ref={ref}
-      className={`${motionClassName} ${className}`.trim()}
-    >
+    <div ref={ref} className={`${motionClassName} ${className}`.trim()}>
       {children}
     </div>
   );

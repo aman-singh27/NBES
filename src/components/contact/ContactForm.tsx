@@ -52,7 +52,8 @@ const fieldClassName =
 const requiredMarker = (
   <>
     <span aria-hidden="true" className="text-[#E24B4A]">
-      {" "}*
+      {" "}
+      *
     </span>
     <span className="sr-only">required</span>
   </>

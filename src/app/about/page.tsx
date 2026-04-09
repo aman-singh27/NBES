@@ -373,8 +373,9 @@ export default function AboutPage() {
                 HIGHEST STANDARDS
               </h2>
               <p className="body-light mt-5 max-w-[560px]">
-                We don&apos;t just meet standards - we document every installation
-                for your audit trail. Certificates available on request.
+                We don&apos;t just meet standards - we document every
+                installation for your audit trail. Certificates available on
+                request.
               </p>
             </div>
 

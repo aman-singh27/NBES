@@ -4,7 +4,11 @@ import CTABand from "@/components/CTABand";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
-import { BreadcrumbSchema, FAQSchema, ServiceSchema } from "@/components/seo/JsonLd";
+import {
+  BreadcrumbSchema,
+  FAQSchema,
+  ServiceSchema,
+} from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {

@@ -68,7 +68,10 @@ export default function Navbar() {
       return Array.from(
         mobileMenuRef.current.querySelectorAll<HTMLElement>(selector),
       ).filter((element) => {
-        return !element.hasAttribute("disabled") && !element.getAttribute("aria-hidden");
+        return (
+          !element.hasAttribute("disabled") &&
+          !element.getAttribute("aria-hidden")
+        );
       });
     };
 

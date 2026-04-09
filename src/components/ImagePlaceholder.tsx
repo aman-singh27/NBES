@@ -11,6 +11,8 @@ export default function ImagePlaceholder({
   label,
   className,
 }: ImagePlaceholderProps) {
+  // TODO: Replace this with <Image> from "next/image" when real photos are available.
+  // Ensure alt text is descriptive, for example: "NBES team installing electrical panel at corporate office, Gurgaon".
   return (
     <div
       role="img"

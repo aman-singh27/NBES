@@ -3,6 +3,7 @@ import { Barlow_Condensed, DM_Sans } from "next/font/google";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { OrganizationSchema } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const displayFont = Barlow_Condensed({
@@ -23,9 +24,9 @@ export const metadata: Metadata = {
       "New Bharat Engineering Services | Electrical & Facility Management Delhi-NCR",
     template: "%s | NBES — New Bharat Engineering Services",
   },
-  metadataBase: new URL("https://nbes.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
-    canonical: "https://nbes.vercel.app",
+    canonical: SITE_URL,
   },
   description:
     "NBES (New Bharat Engineering Services) delivers electrical, plumbing, civil, CCTV, earthing, carpentry, and interior facility services for corporate offices across Delhi-NCR. Trusted by HCL, Nestle, Deloitte, and more since 2003.",
@@ -46,7 +47,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://nbes.vercel.app",
+    localeAlternate: ["en_US"],
+    url: SITE_URL,
     siteName: "New Bharat Engineering Services",
     title:
       "New Bharat Engineering Services | Facility & Electrical Services Delhi-NCR",
@@ -60,6 +62,11 @@ export const metadata: Metadata = {
         alt: "NBES — New Bharat Engineering Services",
       },
     ],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
   twitter: {
     card: "summary_large_image",
@@ -96,6 +103,15 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/barlowcondensed/v12/HTxwL3I-JCGChYJ8VI-L6OO_au7B497y_3HcuKEC.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <meta name="theme-color" content="#0047CC" />
+        <meta name="color-scheme" content="light" />
       </head>
       <body className="m-0 bg-white font-body text-black antialiased">
         <a

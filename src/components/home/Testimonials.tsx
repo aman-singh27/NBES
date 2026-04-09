@@ -36,9 +36,9 @@ export default function Testimonials() {
             <div>
               <SectionLabel>Client Reviews</SectionLabel>
               <h2 className="mt-3 font-display text-display-lg font-extrabold uppercase text-black">
-                WHAT OUR
+                WHAT CLIENTS SAY
                 <br />
-                CLIENTS SAY
+                ABOUT OUR WORK
               </h2>
             </div>
             <p className="body-light">
@@ -46,6 +46,10 @@ export default function Testimonials() {
               project delivery.
             </p>
           </div>
+          <p className="-mt-8 mb-8 font-body text-[13px] text-mid-grey">
+            Testimonials from verified facility and operations managers across
+            our client portfolio.
+          </p>
         </ScrollRevealBlock>
 
         <div className="grid gap-6 lg:grid-cols-3">

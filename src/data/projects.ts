@@ -69,4 +69,19 @@ export const projects: ProjectRecord[] = [
     ],
     image: "/projects/interior-gurgaon.jpg",
   },
+  {
+    slug: "plumbing-maintenance-corporate-noida",
+    title: "Plumbing & Civil Maintenance Contract",
+    category: "Civil",
+    location: "Noida, Uttar Pradesh",
+    summary:
+      "Annual plumbing and minor civil maintenance contract for a multi-floor corporate facility in Noida, covering preventive upkeep and breakdown response.",
+    scope: [
+      "Preventive plumbing inspection",
+      "Fixture repair and replacement",
+      "Minor civil repair works",
+      "Emergency response coverage",
+    ],
+    image: "/projects/plumbing-noida.jpg",
+  },
 ];

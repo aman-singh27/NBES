@@ -4,7 +4,8 @@ import CTABand from "@/components/CTABand";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
-import { FAQSchema, ServiceSchema } from "@/components/seo/JsonLd";
+import { BreadcrumbSchema, FAQSchema, ServiceSchema } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title:
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "NBES installs and tests earthing systems for corporate offices and commercial facilities in Delhi-NCR, ensuring electrical safety compliance. Offices in Gurgaon and Noida.",
   alternates: {
-    canonical: "https://nbes.vercel.app/services/earthing-solutions",
+    canonical: `${SITE_URL}/services/earthing-solutions`,
   },
 };
 
@@ -56,10 +57,20 @@ const sections = [
 export default function EarthingSolutionsPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Services", url: `${SITE_URL}/services` },
+          {
+            name: "Earthing Solutions",
+            url: `${SITE_URL}/services/earthing-solutions`,
+          },
+        ]}
+      />
       <ServiceSchema
         name="Earthing Services Delhi-NCR"
         description="Corporate earthing installation, testing, and safety compliance services for offices and commercial buildings in Delhi-NCR."
-        url="https://nbes.vercel.app/services/earthing-solutions"
+        url={`${SITE_URL}/services/earthing-solutions`}
       />
       <FAQSchema faqs={earthingFaqs} />
 
@@ -139,6 +150,19 @@ export default function EarthingSolutionsPage() {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+      </ScrollRevealBlock>
+
+      <ScrollRevealBlock>
+        <section className="bg-off-white py-12">
+          <div className="container-width rounded-[8px] border border-border bg-white p-8">
+            <SectionLabel>Why NBES</SectionLabel>
+            <ul className="mt-4 space-y-3 font-body text-[15px] text-charcoal">
+              <li>- On-time delivery aligned to committed timelines</li>
+              <li>- High standards of workmanship across every job</li>
+              <li>- Cost-effective solutions tailored to facility needs</li>
+            </ul>
           </div>
         </section>
       </ScrollRevealBlock>

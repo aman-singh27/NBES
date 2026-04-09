@@ -5,8 +5,9 @@ import CTABand from "@/components/CTABand";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
-import { ProjectSchema } from "@/components/seo/JsonLd";
+import { BreadcrumbSchema, ProjectSchema } from "@/components/seo/JsonLd";
 import { projects } from "@/data/projects";
+import { SITE_URL } from "@/lib/constants";
 
 type ProjectPageParams = {
   params: {
@@ -31,7 +32,7 @@ export async function generateMetadata({
     title: `${project.title} - ${project.location}`,
     description: project.summary,
     alternates: {
-      canonical: `https://nbes.vercel.app/projects/${project.slug}`,
+      canonical: `${SITE_URL}/projects/${project.slug}`,
     },
   };
 }
@@ -45,10 +46,17 @@ export default function ProjectDetailPage({ params }: ProjectPageParams) {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Projects", url: `${SITE_URL}/projects` },
+          { name: project.title, url: `${SITE_URL}/projects/${project.slug}` },
+        ]}
+      />
       <ProjectSchema
         name={project.title}
         description={project.summary}
-        url={`https://nbes.vercel.app/projects/${project.slug}`}
+        url={`${SITE_URL}/projects/${project.slug}`}
         location={project.location}
       />
 
@@ -85,6 +93,8 @@ export default function ProjectDetailPage({ params }: ProjectPageParams) {
                   ? "linear-gradient(135deg, #0d1f3c, #1a2f4a)"
                   : project.category === "Security"
                     ? "linear-gradient(135deg, #1a2a1a, #0d1a0d)"
+                    : project.category === "Civil"
+                      ? "linear-gradient(135deg, #2f2a23, #4a4035)"
                     : "linear-gradient(135deg, #1a1a2e, #2a2a3e)"
               }
               label={`${project.title} - ${project.location}`}

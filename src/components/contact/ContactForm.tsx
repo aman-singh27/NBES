@@ -26,8 +26,10 @@ type ContactFormErrors = Partial<Record<keyof ContactFormData, string>>;
 const serviceOptions = [
   "Electrical Works",
   "Earthing Solutions",
-  "Security Systems",
-  "Technical Manpower",
+  "CCTV / Security Systems",
+  "Plumbing Solutions",
+  "Civil & Carpentry Works",
+  "Interior Works",
   "Multiple Services",
   "Not Sure Yet",
 ] as const;
@@ -46,6 +48,15 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const fieldClassName =
   "w-full h-[52px] rounded-[3px] border border-border px-4 font-body text-[15px] text-charcoal placeholder:font-light placeholder:text-mid-grey transition-colors duration-200 focus:border-accent focus:outline-none";
+
+const requiredMarker = (
+  <>
+    <span aria-hidden="true" className="text-[#E24B4A]">
+      {" "}*
+    </span>
+    <span className="sr-only">required</span>
+  </>
+);
 
 function getFieldError(
   field: keyof ContactFormData,
@@ -171,6 +182,7 @@ export default function ContactForm() {
           className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
         >
           Full Name
+          {requiredMarker}
         </label>
         <input
           id="name"
@@ -183,10 +195,17 @@ export default function ContactForm() {
           className={`${fieldClassName} ${errors.name ? "border-[#E24B4A]" : ""}`}
           placeholder="Enter your full name"
           disabled={isSubmitting}
+          required
+          aria-required="true"
           aria-invalid={Boolean(errors.name)}
+          aria-describedby={errors.name ? "name-error" : undefined}
         />
         {errors.name ? (
-          <p className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]">
+          <p
+            id="name-error"
+            role="alert"
+            className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]"
+          >
             <AlertCircle className="h-3 w-3" aria-hidden="true" />
             {errors.name}
           </p>
@@ -199,6 +218,7 @@ export default function ContactForm() {
           className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
         >
           Company Name
+          {requiredMarker}
         </label>
         <input
           id="company"
@@ -210,10 +230,17 @@ export default function ContactForm() {
           className={`${fieldClassName} ${errors.company ? "border-[#E24B4A]" : ""}`}
           placeholder="Enter your company name"
           disabled={isSubmitting}
+          required
+          aria-required="true"
           aria-invalid={Boolean(errors.company)}
+          aria-describedby={errors.company ? "company-error" : undefined}
         />
         {errors.company ? (
-          <p className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]">
+          <p
+            id="company-error"
+            role="alert"
+            className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]"
+          >
             <AlertCircle className="h-3 w-3" aria-hidden="true" />
             {errors.company}
           </p>
@@ -227,6 +254,7 @@ export default function ContactForm() {
             className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
           >
             Phone Number
+            {requiredMarker}
           </label>
           <input
             id="phone"
@@ -239,10 +267,17 @@ export default function ContactForm() {
             className={`${fieldClassName} ${errors.phone ? "border-[#E24B4A]" : ""}`}
             placeholder="+91 99990 60083"
             disabled={isSubmitting}
+            required
+            aria-required="true"
             aria-invalid={Boolean(errors.phone)}
+            aria-describedby={errors.phone ? "phone-error" : undefined}
           />
           {errors.phone ? (
-            <p className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]">
+            <p
+              id="phone-error"
+              role="alert"
+              className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]"
+            >
               <AlertCircle className="h-3 w-3" aria-hidden="true" />
               {errors.phone}
             </p>
@@ -255,6 +290,7 @@ export default function ContactForm() {
             className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
           >
             Email Address
+            {requiredMarker}
           </label>
           <input
             id="email"
@@ -267,10 +303,17 @@ export default function ContactForm() {
             className={`${fieldClassName} ${errors.email ? "border-[#E24B4A]" : ""}`}
             placeholder="you@company.com"
             disabled={isSubmitting}
+            required
+            aria-required="true"
             aria-invalid={Boolean(errors.email)}
+            aria-describedby={errors.email ? "email-error" : undefined}
           />
           {errors.email ? (
-            <p className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]">
+            <p
+              id="email-error"
+              role="alert"
+              className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]"
+            >
               <AlertCircle className="h-3 w-3" aria-hidden="true" />
               {errors.email}
             </p>
@@ -284,6 +327,7 @@ export default function ContactForm() {
           className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
         >
           Service Needed
+          {requiredMarker}
         </label>
         <div className="relative">
           <select
@@ -294,7 +338,10 @@ export default function ContactForm() {
             onBlur={() => handleBlur("service")}
             className={`${fieldClassName} appearance-none ${errors.service ? "border-[#E24B4A]" : ""}`}
             disabled={isSubmitting}
+            required
+            aria-required="true"
             aria-invalid={Boolean(errors.service)}
+            aria-describedby={errors.service ? "service-error" : undefined}
           >
             <option value="">Select a service</option>
             {serviceOptions.map((option) => (
@@ -309,7 +356,11 @@ export default function ContactForm() {
           />
         </div>
         {errors.service ? (
-          <p className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]">
+          <p
+            id="service-error"
+            role="alert"
+            className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]"
+          >
             <AlertCircle className="h-3 w-3" aria-hidden="true" />
             {errors.service}
           </p>
@@ -322,6 +373,7 @@ export default function ContactForm() {
           className="mb-[6px] block font-body text-[13px] font-medium text-charcoal"
         >
           State / Location
+          {requiredMarker}
         </label>
         <input
           id="state"
@@ -333,10 +385,17 @@ export default function ContactForm() {
           className={`${fieldClassName} ${errors.state ? "border-[#E24B4A]" : ""}`}
           placeholder="Enter your state or city"
           disabled={isSubmitting}
+          required
+          aria-required="true"
           aria-invalid={Boolean(errors.state)}
+          aria-describedby={errors.state ? "state-error" : undefined}
         />
         {errors.state ? (
-          <p className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]">
+          <p
+            id="state-error"
+            role="alert"
+            className="mt-1 flex items-center gap-1 text-[12px] text-[#E24B4A]"
+          >
             <AlertCircle className="h-3 w-3" aria-hidden="true" />
             {errors.state}
           </p>

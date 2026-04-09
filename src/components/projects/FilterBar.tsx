@@ -5,6 +5,7 @@ const categories = [
   "Electrical",
   "Earthing",
   "Security",
+  "Civil",
   "Interior",
 ] as const;
 

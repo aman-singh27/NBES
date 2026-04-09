@@ -1,17 +1,62 @@
+import { SITE_URL } from "@/lib/constants";
+
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ElectricalContractor"],
     name: "New Bharat Engineering Services",
     alternateName: "NBES",
-    url: "https://nbes.vercel.app",
-    logo: "https://nbes.vercel.app/logo.png",
-    image: "https://nbes.vercel.app/og-image.jpg",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}/og-image.jpg`,
     description:
       "NBES provides electrical, plumbing, carpentry, civil, CCTV, earthing, and interior facility services for corporate offices across Delhi-NCR since 2003.",
     telephone: "+91-9999060083",
     email: "contact@nbesindia.com",
     foundingDate: "2003",
+    priceRange: "INR",
+    currenciesAccepted: "INR",
+    paymentAccepted: "Cash, Bank Transfer",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+91-9999060083",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: "0124-4283894",
+        contactType: "customer service",
+        areaServed: "IN",
+      },
+    ],
+    knowsAbout: [
+      "Electrical Installation",
+      "Corporate Facility Management",
+      "Earthing Solutions",
+      "CCTV Installation",
+      "Plumbing Services",
+      "Civil Works",
+      "Interior Fit-Outs",
+      "IS 3043 Earthing Standards",
+    ],
     address: [
       {
         "@type": "PostalAddress",
@@ -45,7 +90,7 @@ export function OrganizationSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Electrical Services",
-            url: "https://nbes.vercel.app/services/electrical-works",
+            url: `${SITE_URL}/services/electrical-works`,
           },
         },
         {
@@ -53,7 +98,7 @@ export function OrganizationSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Earthing Services",
-            url: "https://nbes.vercel.app/services/earthing-solutions",
+            url: `${SITE_URL}/services/earthing-solutions`,
           },
         },
         {
@@ -61,15 +106,7 @@ export function OrganizationSchema() {
           itemOffered: {
             "@type": "Service",
             name: "CCTV Installation",
-            url: "https://nbes.vercel.app/services/security-systems",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Skilled Facility Workforce",
-            url: "https://nbes.vercel.app/services/technical-manpower",
+            url: `${SITE_URL}/services/security-systems`,
           },
         },
         {
@@ -77,7 +114,7 @@ export function OrganizationSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Plumbing Solutions",
-            url: "https://nbes.vercel.app/services/plumbing-solutions",
+            url: `${SITE_URL}/services/plumbing-solutions`,
           },
         },
         {
@@ -85,7 +122,7 @@ export function OrganizationSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Civil & Carpentry Works",
-            url: "https://nbes.vercel.app/services/civil-carpentry-works",
+            url: `${SITE_URL}/services/civil-carpentry-works`,
           },
         },
         {
@@ -93,12 +130,36 @@ export function OrganizationSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Interior Works",
-            url: "https://nbes.vercel.app/services/interior-works",
+            url: `${SITE_URL}/services/interior-works`,
           },
         },
       ],
     },
-    sameAs: ["http://www.nbesindia.com"],
+    sameAs: ["https://www.nbesindia.com"],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function BreadcrumbSchema({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
   };
 
   return (
@@ -150,7 +211,7 @@ export function ServiceSchema({
     provider: {
       "@type": "Organization",
       name: "New Bharat Engineering Services",
-      url: "https://nbes.vercel.app",
+      url: SITE_URL,
     },
     areaServed: { "@type": "Country", name: "India" },
   };
@@ -183,7 +244,7 @@ export function ProjectSchema({
     provider: {
       "@type": "Organization",
       name: "New Bharat Engineering Services",
-      url: "https://nbes.vercel.app",
+      url: SITE_URL,
     },
     areaServed: {
       "@type": "Place",

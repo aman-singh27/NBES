@@ -41,7 +41,26 @@ export default function Footer() {
               for corporate and commercial offices across Delhi-NCR.
             </p>
 
+            <p className="mt-3 font-body text-[13px] text-white/50">
+              Established in 2003.
+            </p>
+
             <div className="mt-6 flex flex-col gap-3">
+              <a
+                href="https://www.nbesindia.com"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-body text-sm text-white/45 transition-colors hover:text-white"
+              >
+                www.nbesindia.com
+              </a>
+              <a
+                href="tel:01244283894"
+                className="inline-flex items-center gap-2 font-body text-sm text-white/45 transition-colors hover:text-white"
+              >
+                <Phone size={15} />
+                0124-4283894
+              </a>
               <a
                 href="tel:+919999060083"
                 className="inline-flex items-center gap-2 font-body text-sm text-white/45 transition-colors hover:text-white"
@@ -56,15 +75,23 @@ export default function Footer() {
                 <Mail size={15} />
                 contact@nbesindia.com
               </a>
-              <p className="inline-flex items-start gap-2 font-body text-sm text-white/45 transition-colors hover:text-white">
-                <MapPin size={15} />
-                <span>
-                  366, Saraswati Vihar, Mehrauli Road, Gurgaon - 122001
-                  <br />
-                  Shop No. 1, Khasra No. 38, Bhartha Complex, Part-II, Nithari,
-                  Sector-31, Noida - 201301
-                </span>
-              </p>
+              <a
+                href="mailto:nbesindia@gmail.com"
+                className="inline-flex items-center gap-2 font-body text-sm text-white/45 transition-colors hover:text-white"
+              >
+                <Mail size={15} />
+                nbesindia@gmail.com
+              </a>
+              <div className="inline-flex items-start gap-2 font-body text-sm text-white/45">
+                <MapPin size={15} className="mt-0.5" />
+                <address className="not-italic leading-[1.7]">
+                  <p>366, Saraswati Vihar, Mehrauli Road, Gurgaon - 122001</p>
+                  <p>
+                    Shop No. 1, Khasra No. 38, Bhartha Complex, Part-II,
+                    Nithari, Sector-31, Noida - 201301
+                  </p>
+                </address>
+              </div>
             </div>
           </div>
 
@@ -140,7 +167,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/8 pt-5 font-body text-[12px] text-white/45 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} NBES. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} NBES. All rights reserved. Established
+            2003.
+          </p>
           <div className="flex gap-5">
             <Link
               href="/privacy"

@@ -4,14 +4,15 @@ import CTABand from "@/components/CTABand";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
-import { ServiceSchema } from "@/components/seo/JsonLd";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Interior Works - Workspace Enhancement Services Delhi-NCR",
   description:
     "NBES handles functional and aesthetic workspace enhancement including false ceiling, flooring, painting, and modular fit-outs for corporate facilities in Delhi-NCR.",
   alternates: {
-    canonical: "https://nbes.vercel.app/services/interior-works",
+    canonical: `${SITE_URL}/services/interior-works`,
   },
 };
 
@@ -27,10 +28,17 @@ const interiorItems = [
 export default function InteriorWorksPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Services", url: `${SITE_URL}/services` },
+          { name: "Interior Works", url: `${SITE_URL}/services/interior-works` },
+        ]}
+      />
       <ServiceSchema
         name="Interior Works"
         description="Workspace enhancement services including false ceiling, flooring, painting, and fit-outs for corporate offices in Delhi-NCR."
-        url="https://nbes.vercel.app/services/interior-works"
+        url={`${SITE_URL}/services/interior-works`}
       />
 
       <ScrollRevealBlock>
@@ -82,6 +90,19 @@ export default function InteriorWorksPage() {
                 </p>
               </article>
             ))}
+          </div>
+        </section>
+      </ScrollRevealBlock>
+
+      <ScrollRevealBlock>
+        <section className="bg-off-white py-12">
+          <div className="container-width rounded-[8px] border border-border bg-white p-8">
+            <SectionLabel>Why NBES</SectionLabel>
+            <ul className="mt-4 space-y-3 font-body text-[15px] text-charcoal">
+              <li>- On-time delivery aligned to committed timelines</li>
+              <li>- High standards of workmanship across every job</li>
+              <li>- Cost-effective solutions tailored to facility needs</li>
+            </ul>
           </div>
         </section>
       </ScrollRevealBlock>

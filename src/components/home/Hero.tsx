@@ -97,7 +97,7 @@ export default function Hero() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 font-display text-[13px] font-bold uppercase tracking-[0.14em] text-white/55"
           >
-            Reliability. Quality. On Time.
+            Delivering Reliable Infrastructure Solutions with Precision
           </motion.p>
 
           <motion.div

@@ -1,7 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Anchor, ArrowRight, Shield, Users, Wrench, Zap } from "lucide-react";
+import {
+  Anchor,
+  ArrowRight,
+  Hammer,
+  Paintbrush,
+  Shield,
+  Wrench,
+  Zap,
+} from "lucide-react";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 
@@ -47,27 +55,53 @@ const services = [
   },
   {
     num: "04",
-    icon: Users,
-    title: "Facility Workforce",
-    desc: "On-call skilled technicians for electrical, plumbing, civil, and carpentry requirements across Delhi-NCR facilities.",
+    icon: Wrench,
+    title: "Plumbing Solutions",
+    desc: "Preventive and corrective plumbing support for office floors, utility lines, and facility infrastructure.",
     features: [
-      "Electrical Teams",
-      "Plumbing Technicians",
-      "Civil & Carpentry",
-      "Rapid Deployment",
+      "Leak Detection",
+      "Fixture Replacement",
+      "Drainage Upkeep",
+      "Emergency Response",
     ],
-    href: "/services/technical-manpower",
+    href: "/services/plumbing-solutions",
   },
   {
-    num: "05+",
-    icon: Wrench,
-    title: "More Services",
-    desc: "Explore plumbing solutions, civil and carpentry works, and interior workspace enhancement for corporate offices.",
+    num: "05",
+    icon: Hammer,
+    title: "Civil & Carpentry",
+    desc: "Minor civil repairs, partition changes, and carpentry execution aligned to active office operations.",
     features: [
-      "Plumbing Solutions",
-      "Civil & Carpentry Works",
-      "Interior Works",
+      "Partition Works",
+      "False Ceilings",
+      "Flooring Repairs",
+      "Custom Carpentry",
+    ],
+    href: "/services/civil-carpentry-works",
+  },
+  {
+    num: "06",
+    icon: Paintbrush,
+    title: "Interior Works",
+    desc: "Workspace enhancement services including finishing, ceiling, flooring, painting, and fit-out detailing.",
+    features: [
+      "Flooring & Finishes",
+      "Painting Works",
+      "Modular Setup",
+      "Space Upgrades",
+    ],
+    href: "/services/interior-works",
+  },
+  {
+    num: "07+",
+    icon: ArrowRight,
+    title: "More Services",
+    desc: "View all NBES offerings across electrical, earthing, CCTV, plumbing, civil, carpentry, and interiors.",
+    features: [
       "Full Service Portfolio",
+      "Corporate Facility Focus",
+      "Compliance-Ready Delivery",
+      "Delhi-NCR Coverage",
     ],
     href: "/services",
   },
@@ -89,8 +123,8 @@ export default function ServicesGrid() {
             </div>
             <p className="body-light text-[17px]">
               Integrated corporate facility services across Delhi-NCR, from
-              electrical maintenance and earthing to CCTV, workforce support,
-              plumbing, and interior works.
+              electrical maintenance and earthing to CCTV, plumbing,
+              civil-carpentry, and interior works.
             </p>
           </div>
         </ScrollRevealBlock>

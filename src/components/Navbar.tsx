@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -32,6 +32,10 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const scrolled = useScrollPosition(60);
   const pathname = usePathname();
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const openMenuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeMenuButtonRef = useRef<HTMLButtonElement>(null);
+  const wasMobileOpenRef = useRef(false);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -40,21 +44,74 @@ export default function Navbar() {
   useEffect(() => {
     if (!mobileOpen) {
       document.body.classList.remove("overflow-hidden");
+
+      if (wasMobileOpenRef.current) {
+        openMenuButtonRef.current?.focus();
+      }
+
+      wasMobileOpenRef.current = false;
       return;
     }
 
+    wasMobileOpenRef.current = true;
     document.body.classList.add("overflow-hidden");
+    closeMenuButtonRef.current?.focus();
+
+    const getFocusableElements = () => {
+      if (!mobileMenuRef.current) {
+        return [] as HTMLElement[];
+      }
+
+      const selector =
+        'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+      return Array.from(
+        mobileMenuRef.current.querySelectorAll<HTMLElement>(selector),
+      ).filter((element) => {
+        return !element.hasAttribute("disabled") && !element.getAttribute("aria-hidden");
+      });
+    };
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setMobileOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab") {
+        return;
+      }
+
+      const focusableElements = getFocusableElements();
+      if (focusableElements.length === 0) {
+        return;
+      }
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+      const activeElement = document.activeElement as HTMLElement | null;
+      const isFocusInsideMenu =
+        !!activeElement && mobileMenuRef.current?.contains(activeElement);
+
+      if (event.shiftKey) {
+        if (!isFocusInsideMenu || activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        }
+        return;
+      }
+
+      if (!isFocusInsideMenu || activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
       }
     };
 
-    window.addEventListener("keydown", onKeyDown);
+    document.addEventListener("keydown", onKeyDown);
 
     return () => {
       document.body.classList.remove("overflow-hidden");
-      window.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("keydown", onKeyDown);
     };
   }, [mobileOpen]);
 
@@ -112,8 +169,11 @@ export default function Navbar() {
         </div>
 
         <button
+          ref={openMenuButtonRef}
           type="button"
           aria-label="Open navigation menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation-menu"
           onClick={() => setMobileOpen(true)}
           className="inline-flex h-11 w-11 items-center justify-center text-charcoal md:hidden"
         >
@@ -129,9 +189,14 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black md:hidden"
           >
-            <div className="container-width flex h-full flex-col py-8">
+            <div
+              id="mobile-navigation-menu"
+              ref={mobileMenuRef}
+              className="container-width flex h-full flex-col py-8"
+            >
               <div className="mb-12 flex justify-end">
                 <button
+                  ref={closeMenuButtonRef}
                   type="button"
                   aria-label="Close navigation menu"
                   onClick={() => setMobileOpen(false)}

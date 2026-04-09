@@ -8,7 +8,12 @@ import FilterBar, {
   type FilterCategory,
 } from "@/components/projects/FilterBar";
 
-export type ProjectCategory = Exclude<FilterCategory, "All">;
+export type ProjectCategory =
+  | "Electrical"
+  | "Earthing"
+  | "Security"
+  | "Civil"
+  | "Interior";
 
 export type ProjectItem = {
   id: number;

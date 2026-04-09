@@ -4,28 +4,34 @@ import SectionLabel from "@/components/SectionLabel";
 import CTABand from "@/components/CTABand";
 import FAQAccordion from "@/components/FAQAccordion";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
-import { FAQSchema } from "@/components/seo/JsonLd";
+import { BreadcrumbSchema, FAQSchema } from "@/components/seo/JsonLd";
 import ServiceDetail, {
   type ServiceDetailProps,
 } from "@/components/services/ServiceDetail";
 import { faqItems } from "@/data/faqs";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title:
     "Services - Electrical, Plumbing, CCTV, Earthing & Facility Services Delhi-NCR",
   description:
-    "NBES offers electrical services, plumbing, carpentry, civil works, CCTV installation, earthing, and interior works for corporate offices in Delhi-NCR. One trusted partner for all facility needs.",
+    "Electrical installation, plumbing, CCTV, earthing, carpentry, civil and interior works for corporate offices in Delhi-NCR. Single facility partner serving Gurgaon and Noida since 2003.",
   alternates: {
-    canonical: "https://nbes.vercel.app/services",
+    canonical: `${SITE_URL}/services`,
   },
   keywords: [
     "electrical services Gurgaon",
-    "facility services Delhi NCR",
-    "CCTV installation Noida",
-    "earthing services Delhi",
-    "plumbing services Gurgaon",
-    "civil works NCR",
-    "corporate facility management Delhi",
+    "electrical contractor Delhi NCR",
+    "CCTV installation Gurgaon Noida",
+    "earthing services Delhi NCR",
+    "facility management Gurgaon",
+    "plumbing services corporate Noida",
+    "New Bharat Engineering Services",
+    "NBES India",
+    "corporate facility services Delhi",
+    "IS 3043 earthing contractor",
+    "chemical earthing installation NCR",
+    "office electrical maintenance Gurgaon",
   ],
 };
 
@@ -113,33 +119,6 @@ const services: ServiceDetailProps[] = [
   },
   {
     num: "04",
-    id: "manpower",
-    title: "SKILLED FACILITY\nWORKFORCE ON DEMAND",
-    subtitle: "Technical Manpower",
-    description:
-      "On-call workforce support for electrical, plumbing, civil, carpentry, and facility operations.",
-    included: [
-      "Certified Electricians & Supervisors",
-      "Plumbing Technicians",
-      "Civil & Carpentry Workers",
-      "CCTV & Security Technicians",
-      "Short & Long-Term Contracts",
-      "Rapid Mobilization Across Delhi-NCR",
-    ],
-    industries: [
-      "Corporate Offices",
-      "Facility Management Teams",
-      "Plant Operators",
-      "Commercial Properties",
-    ],
-    layout: "image-right",
-    background: "off-white",
-    imageGradient: "linear-gradient(135deg, #1a1a0d 0%, #2a2a1a 100%)",
-    imageLabel: "Skilled facility workforce on site",
-    href: "/services/technical-manpower",
-  },
-  {
-    num: "05",
     id: "plumbing",
     title: "PLUMBING SOLUTIONS\nFOR CORPORATE FACILITIES",
     subtitle: "Plumbing Services",
@@ -166,7 +145,7 @@ const services: ServiceDetailProps[] = [
     href: "/services/plumbing-solutions",
   },
   {
-    num: "06",
+    num: "05",
     id: "civil",
     title: "CIVIL & CARPENTRY\nWORKS",
     subtitle: "Civil & Carpentry",
@@ -188,7 +167,7 @@ const services: ServiceDetailProps[] = [
     href: "/services/civil-carpentry-works",
   },
   {
-    num: "07",
+    num: "06",
     id: "interior",
     title: "INTERIOR WORKS &\nWORKSPACE ENHANCEMENT",
     subtitle: "Interior Works",
@@ -249,6 +228,12 @@ const certifications = [
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Services", url: `${SITE_URL}/services` },
+        ]}
+      />
       <ScrollRevealBlock>
         <section className="bg-black py-28 text-center">
           <div className="container-width">

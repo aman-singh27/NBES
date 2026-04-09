@@ -9,14 +9,30 @@ import Testimonials from "@/components/home/Testimonials";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 import StatsCounter from "@/components/StatsCounter";
+import { FAQSchema } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Electrical & Facility Services Delhi-NCR | Since 2003",
   description:
-    "New Bharat Engineering Services (NBES) delivers electrical, plumbing, CCTV, earthing, civil, carpentry, and interior works for corporate offices across Delhi-NCR. Serving HCL, Nestle, Deloitte, and more since 2003.",
+    "NBES (New Bharat Engineering Services) - trusted electrical and facility services provider for corporate offices in Delhi-NCR since 2003. Electrical, plumbing, CCTV, earthing, civil, carpentry and interiors. Clients include HCL, Nestle and Deloitte.",
   alternates: {
-    canonical: "https://nbes.vercel.app/",
+    canonical: SITE_URL,
   },
+  keywords: [
+    "electrical services Gurgaon",
+    "electrical contractor Delhi NCR",
+    "CCTV installation Gurgaon Noida",
+    "earthing services Delhi NCR",
+    "facility management Gurgaon",
+    "plumbing services corporate Noida",
+    "New Bharat Engineering Services",
+    "NBES India",
+    "corporate facility services Delhi",
+    "IS 3043 earthing contractor",
+    "chemical earthing installation NCR",
+    "office electrical maintenance Gurgaon",
+  ],
 };
 
 const logos = [
@@ -27,26 +43,26 @@ const logos = [
   "Mercer",
   "Deloitte",
   "R1 RCM",
-  "Huron Consulting",
+  "Huron Consulting Group",
 ];
 
 const whyItems = [
   {
-    title: "20+ Years of Experience",
+    title: "On-Time Delivery",
     description:
-      "Founded in 2003, NBES brings over two decades of reliable facility service delivery to corporate clients across Delhi-NCR.",
+      "Defined planning, disciplined workflows, and responsive site teams help us deliver electrical and facility works within committed timelines.",
     icon: BadgeCheck,
   },
   {
-    title: "Corporate-Grade Execution",
+    title: "High Standards of Workmanship",
     description:
-      "We understand corporate environments - minimal disruption, documented handovers, and consistent quality across all service categories.",
+      "Quality checks and experienced technicians maintain consistent standards across electrical, plumbing, CCTV, earthing, civil, carpentry, and interior works.",
     icon: GitMerge,
   },
   {
-    title: "Full-Facility Coverage",
+    title: "Cost-Effective Solutions",
     description:
-      "From electrical and earthing to plumbing, civil, CCTV, and interior works - one trusted partner for your complete facility needs.",
+      "Single-partner coordination across core services reduces vendor overhead while keeping facility execution practical, efficient, and accountable.",
     icon: ShieldCheck,
   },
 ] as const;
@@ -60,9 +76,28 @@ const serviceAreas = [
   "NCR Region",
 ];
 
+const homeFaqs = [
+  {
+    question: "What services does NBES provide in Delhi-NCR?",
+    answer:
+      "NBES provides electrical services, earthing, CCTV and security systems, plumbing, civil and carpentry works, and interior works for corporate facilities.",
+  },
+  {
+    question: "Which locations does NBES serve?",
+    answer:
+      "NBES serves Gurgaon, Noida, Delhi, Faridabad, Greater Noida, and surrounding NCR corporate and commercial locations.",
+  },
+  {
+    question: "How long has NBES been operating?",
+    answer:
+      "NBES has delivered integrated electrical and facility services since 2003.",
+  },
+];
+
 export default function Home() {
   return (
     <>
+      <FAQSchema faqs={homeFaqs} />
       <Hero />
 
       <ScrollRevealBlock>
@@ -82,6 +117,12 @@ export default function Home() {
                 </span>
               ))}
             </div>
+          </div>
+          <div className="container-width mt-4">
+            <p className="font-body text-[13px] text-mid-grey">
+              Trusted by leading corporate and institutional clients since
+              2003.
+            </p>
           </div>
         </section>
       </ScrollRevealBlock>
@@ -158,6 +199,16 @@ export default function Home() {
                 corporate clients across Delhi, Gurgaon, Noida, Faridabad,
                 Greater Noida, and the broader NCR region.
               </p>
+              <div className="mt-4 space-y-2 rounded-[8px] border border-white/10 bg-white/5 p-4">
+                <p className="font-body text-[14px] text-white/80">
+                  Gurgaon Office: 366, Saraswati Vihar, Mehrauli Road, Gurgaon
+                  - 122001
+                </p>
+                <p className="font-body text-[14px] text-white/80">
+                  Noida Office: Shop No. 1, Khasra No. 38, Bhartha Complex,
+                  Part-II, Nithari, Sector-31, Noida - 201301
+                </p>
+              </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 {serviceAreas.map((area) => (
                   <span

@@ -6,6 +6,8 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
 import StatsCounter from "@/components/StatsCounter";
+import { BreadcrumbSchema, FAQSchema } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/constants";
 
 type ValueItem = {
   title: string;
@@ -31,22 +33,34 @@ type ProcessStep = {
 
 const valueItems: ValueItem[] = [
   {
-    title: "Client-Centric Approach",
+    title: "Requirement Understanding",
     description:
-      "We take time to understand each client's operational requirements and deliver solutions that are practical, scalable, and aligned with their needs.",
+      "Clear assessment of client needs and site conditions before work begins to ensure practical and aligned delivery.",
     icon: BadgeCheck,
   },
   {
     title: "Planned Execution",
     description:
-      "Defined timelines, structured workflows, and disciplined on-site processes ensure minimal disruption to your operations.",
+      "Defined timelines and systematic workflows keep execution disciplined and reduce disruption to daily operations.",
     icon: GitMerge,
+  },
+  {
+    title: "Quality Assurance",
+    description:
+      "Consistent standards across all service categories through structured checks, documentation, and accountable handovers.",
+    icon: Award,
   },
   {
     title: "Safety & Compliance",
     description:
-      "All service delivery adheres to safety norms and regulatory requirements - protecting your employees, environment, and assets.",
+      "Adherence to safety norms and regulatory requirements across every site to protect people, assets, and operations.",
     icon: ShieldCheck,
+  },
+  {
+    title: "Continuous Improvement",
+    description:
+      "Ongoing evaluation of execution quality and client feedback to strengthen service delivery over time.",
+    icon: BadgeCheck,
   },
 ];
 
@@ -63,7 +77,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Facility Services",
-    role: "Plumbing, Civil & Carpentry",
+    role: "Plumbing, Civil & Carpentry Services",
     gradient: "linear-gradient(135deg, #48688a 0%, #1d3149 100%)",
   },
   {
@@ -111,15 +125,40 @@ const processSteps: ProcessStep[] = [
 export const metadata: Metadata = {
   title: "About Us - New Bharat Engineering Services | Since 2003",
   description:
-    "NBES (New Bharat Engineering Services) has delivered electrical and facility management services to leading corporate clients across Delhi-NCR since 2003. Learn about our approach, values, and team.",
+    "New Bharat Engineering Services (NBES) - 20+ years delivering integrated electrical and facility services in Delhi-NCR. Trusted by HCL, Nestle, Deloitte. Offices in Gurgaon and Noida.",
   alternates: {
-    canonical: "https://nbes.vercel.app/about",
+    canonical: `${SITE_URL}/about`,
   },
 };
+
+const aboutFaqs = [
+  {
+    question: "When was NBES established?",
+    answer:
+      "NBES was established in 2003 and has over two decades of experience delivering integrated facility services.",
+  },
+  {
+    question: "Which organizations has NBES worked with?",
+    answer:
+      "NBES has supported leading corporate clients including HCL, Nestle, Fidelity, MetLife, Mercer, Deloitte, R1 RCM, and Huron Consulting Group.",
+  },
+  {
+    question: "How does NBES execute facility projects?",
+    answer:
+      "NBES follows a structured process: requirement understanding, planned execution, quality checks, safety compliance, and documented handover.",
+  },
+];
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "About", url: `${SITE_URL}/about` },
+        ]}
+      />
+      <FAQSchema faqs={aboutFaqs} />
       <ScrollRevealBlock>
         <section className="bg-black py-28 text-center">
           <div className="container-width">
@@ -128,6 +167,7 @@ export default function AboutPage() {
               ABOUT NBES
             </h1>
             <p className="mx-auto mt-5 max-w-[560px] font-body text-[17px] font-light leading-[1.75] text-white/65">
+              Delivering Reliable Infrastructure Solutions with Precision.
               Established in 2003, NBES has built a reputation for reliability,
               responsiveness, and disciplined facility service delivery across
               Delhi-NCR.
@@ -168,6 +208,18 @@ export default function AboutPage() {
                   maintain quality standards across every service category so
                   facility managers can rely on one team rather than managing
                   multiple vendors.
+                </p>
+                <p>
+                  NBES is a trusted partner in delivering integrated electrical
+                  and facility management services. With a strong foundation
+                  built over two decades, we enable organisations to maintain
+                  safe, efficient, and well-functioning work environments
+                  through consistent and high-quality execution.
+                </p>
+                <p>
+                  Customer satisfaction is our main focus; we understand our
+                  clients&apos; requirements and expectations, striving for
+                  continuous improvement and operational excellence.
                 </p>
               </div>
             </div>
@@ -216,22 +268,15 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:divide-x md:divide-border md:gap-0">
-              {valueItems.map((item, index) => {
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+              {valueItems.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={item.title}
-                    className={[
-                      "text-center md:px-8 md:text-left",
-                      index < valueItems.length - 1
-                        ? "border-b border-border pb-8 md:border-b-0 md:pb-0"
-                        : "",
-                    ]
-                      .filter(Boolean)
-                      .join(" ")}
+                    className="rounded-[6px] border border-border bg-white p-6 text-center sm:text-left"
                   >
-                    <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-accent-light md:mx-0">
+                    <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-accent-light sm:mx-0">
                       <Icon size={28} className="text-accent" />
                     </div>
                     <h3 className="mb-3 font-display text-[20px] font-bold uppercase text-black">
@@ -328,9 +373,8 @@ export default function AboutPage() {
                 HIGHEST STANDARDS
               </h2>
               <p className="body-light mt-5 max-w-[560px]">
-                We don&apos;t just meet standards - we document every
-                installation for your audit trail. All certifications on
-                request.
+                We don&apos;t just meet standards - we document every installation
+                for your audit trail. Certificates available on request.
               </p>
             </div>
 

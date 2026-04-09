@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Clock, Mail, Map, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import ContactForm from "@/components/contact/ContactForm";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
+import { BreadcrumbSchema, FAQSchema } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title:
     "Contact New Bharat Engineering Services - Delhi-NCR Facility Services",
   description:
-    "Contact New Bharat Engineering Services for electrical and facility service requirements across Delhi-NCR. Reach our Gurgaon and Noida teams for fast support.",
+    "Contact NBES for electrical, plumbing, CCTV, earthing or facility service requirements in Delhi, Gurgaon and Noida. Call +91 99990 60083 or email contact@nbesindia.com.",
   alternates: {
-    canonical: "https://nbes.vercel.app/contact",
+    canonical: `${SITE_URL}/contact`,
   },
 };
 
@@ -19,22 +21,46 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "New Bharat Engineering Services",
-  "@id": "https://nbes.vercel.app",
-  url: "https://nbes.vercel.app",
+  "@id": SITE_URL,
+  url: SITE_URL,
   telephone: "+91-9999060083",
   email: "contact@nbesindia.com",
   foundingDate: "2003",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "366, Saraswati Vihar, Mehrauli Road",
-    addressLocality: "Gurgaon",
-    postalCode: "122001",
-    addressRegion: "Haryana",
-    addressCountry: "IN",
-  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress: "366, Saraswati Vihar, Mehrauli Road",
+      addressLocality: "Gurgaon",
+      postalCode: "122001",
+      addressRegion: "Haryana",
+      addressCountry: "IN",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress:
+        "Shop No. 1, Khasra No. 38, Bhartha Complex, Part-II, Nithari, Sector-31",
+      addressLocality: "Noida",
+      postalCode: "201301",
+      addressRegion: "Uttar Pradesh",
+      addressCountry: "IN",
+    },
+  ],
   openingHours: "Mo-Sa 09:00-18:00",
   areaServed: "Delhi-NCR",
 };
+
+const contactFaqs = [
+  {
+    question: "How quickly does NBES respond to enquiries?",
+    answer:
+      "NBES responds to project enquiries within 24 working hours for Delhi-NCR service requests.",
+  },
+  {
+    question: "Which areas does NBES cover?",
+    answer:
+      "NBES serves Gurgaon, Noida, Delhi, Faridabad, Greater Noida, and surrounding NCR locations.",
+  },
+];
 
 const coveredAreas = [
   "Gurgaon",
@@ -48,6 +74,13 @@ const coveredAreas = [
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Contact", url: `${SITE_URL}/contact` },
+        ]}
+      />
+      <FAQSchema faqs={contactFaqs} />
       <Script id="local-business-jsonld" type="application/ld+json">
         {JSON.stringify(localBusinessSchema)}
       </Script>
@@ -75,9 +108,9 @@ export default function ContactPage() {
               <ContactForm />
 
               <aside>
-                <h3 className="mb-8 font-display text-[28px] font-bold uppercase text-black">
+                <h2 className="mb-8 font-display text-[28px] font-bold uppercase text-black">
                   Direct Contact
-                </h3>
+                </h2>
 
                 <div className="flex flex-col gap-6">
                   <div className="flex items-start gap-4">
@@ -198,12 +231,14 @@ export default function ContactPage() {
 
       <ScrollRevealBlock>
         <section className="h-[400px] w-full bg-[#e8e7e0]">
-          <div className="container-width flex h-full flex-col items-center justify-center gap-3">
-            <Map className="h-10 w-10 text-mid-grey" aria-hidden="true" />
-            <p className="font-body text-[14px] text-mid-grey">
-              Map placeholder
-            </p>
-          </div>
+          <iframe
+            title="NBES Gurgaon Office Map"
+            src="https://www.google.com/maps?q=366%20Saraswati%20Vihar%20Mehrauli%20Road%20Gurgaon%20122001&output=embed"
+            className="h-full w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
         </section>
       </ScrollRevealBlock>
     </>

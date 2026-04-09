@@ -5,17 +5,19 @@ import FAQAccordion from "@/components/FAQAccordion";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import ProjectGrid, {
   type ProjectItem,
 } from "@/components/projects/ProjectGrid";
 import { projects as projectData } from "@/data/projects";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Completed Projects - Corporate Facility Services Delhi-NCR",
   description:
     "View NBES project portfolio across Delhi-NCR: corporate electrical maintenance, CCTV installations, earthing compliance work, and office interior fit-outs.",
   alternates: {
-    canonical: "https://nbes.vercel.app/projects",
+    canonical: `${SITE_URL}/projects`,
   },
 };
 
@@ -30,6 +32,8 @@ const projects: ProjectItem[] = projectData.map((project, index) => ({
       ? "linear-gradient(135deg, #0d1f3c, #1a2f4a)"
       : project.category === "Security"
         ? "linear-gradient(135deg, #1a2a1a, #0d1a0d)"
+        : project.category === "Civil"
+          ? "linear-gradient(135deg, #2f2a23, #4a4035)"
         : project.category === "Interior"
           ? "linear-gradient(135deg, #2c1f12, #4a3420)"
           : "linear-gradient(135deg, #1a1a2e, #2a2a3e)",
@@ -38,6 +42,12 @@ const projects: ProjectItem[] = projectData.map((project, index) => ({
 export default function ProjectsPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Projects", url: `${SITE_URL}/projects` },
+        ]}
+      />
       <ScrollRevealBlock>
         <section className="bg-black">
           <div className="container-width grid items-start pt-24 pb-0 md:grid-cols-[60fr_40fr]">

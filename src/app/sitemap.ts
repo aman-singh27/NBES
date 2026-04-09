@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
+import { SITE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nbes.vercel.app";
+  const baseUrl = SITE_URL;
   const lastModified = new Date();
 
   return [
@@ -32,12 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/services/security-systems`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/technical-manpower`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,

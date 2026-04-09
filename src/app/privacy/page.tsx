@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import ScrollRevealBlock from "@/components/ScrollRevealBlock";
 import SectionLabel from "@/components/SectionLabel";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - New Bharat Engineering Services",
   description:
     "Read how NBES handles contact form submissions, inquiry data, and privacy requests.",
   alternates: {
-    canonical: "https://nbes.vercel.app/privacy",
+    canonical: `${SITE_URL}/privacy`,
   },
 };
 
